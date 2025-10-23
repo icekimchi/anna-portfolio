@@ -14,7 +14,7 @@ export default function ProjectCard({ title, description, link, image }: Project
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 bg-white"
+      className="block rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 bg-white"
     >
       {/* Image */}
       <Image
