@@ -6,7 +6,7 @@ import SocialLinks from "./SocialLinks";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center text-gray-900 pt-40">
+    <section className="flex items-center justify-center text-gray-900 pt-20 py-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }} 
         animate={{ opacity: 1, y: 0 }}  
@@ -15,7 +15,6 @@ export default function Hero() {
       >
         {/* left : little bit of myself */}
         <div className="w-full md:w-3/5 text-center md:text-left">
-          <h1 className="text-8xl font-bold mb-6">Anna Park</h1>
           <p className="text-lg mb-8 text-gray-700">
             Hi! I’m Anna — a Software Engineer who loves designing and creating
             thoughtful digital experiences.
