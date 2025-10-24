@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import SocialLinks from "./SocialLinks";
 import { motion } from "framer-motion";
+import SocialLinks from "./SocialLinks";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center bg-white text-gray-900 p-12">
+    <section className="flex items-center justify-center text-gray-900 pt-40">
       <motion.div
         initial={{ opacity: 0, y: 30 }} 
         animate={{ opacity: 1, y: 0 }}  
