@@ -18,12 +18,13 @@ export default function Home() {
           className="max-w-6xl mx-auto py-12"
         >
         <hr className="border-t border-gray-300" />
-        <h2 className="text-xl font-semibold mt-8">Selected Projects</h2>
+        <h2 className="text-xl font-sans font-semibold mt-8">Selected Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 py-12">
           {projects.map((p) => (
             <ProjectCard
               key={p.slug}
               title={p.title}
+              role={p.role}
               description={p.description}
               slug={p.slug}
               image={p.image}
