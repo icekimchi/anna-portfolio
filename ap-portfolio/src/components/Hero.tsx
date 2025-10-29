@@ -16,11 +16,11 @@ export default function Hero() {
         {/* left : little bit of myself */}
         <div className="w-full text-center md:text-left">
           <h2 className="text-gray-900 text-3xl mb-6 py-3">
-            Hi, I'm Anna.
-            I'm a Software Developer who loves designing and creating
+            Hi, I\'m Anna.
+            I\'m a Software Developer who loves designing and creating
             thoughtful digital experiences.
             With a background in software engineering and UX,
-            I aim to build digital products that make people’s lives easier.
+            I aim to build digital products that make people\'s lives easier.
           </h2>
           <SocialLinks />
         </div>
