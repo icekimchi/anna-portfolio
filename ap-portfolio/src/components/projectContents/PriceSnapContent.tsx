@@ -5,7 +5,7 @@ export default function PriceSnapContents(){
     <section className="py-20 px-4 sm:px-8 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <img
-            src="/images/pricesnap_problem.png"  
+            src="/images/pricesnap/pricesnap_problem.png"  
             alt="Overview Preview"
             className="w-full rounded-2xl shadow-lg mb-10 object-cover"
           />
@@ -48,7 +48,7 @@ export default function PriceSnapContents(){
             </div>
 
             <div>
-              <h2 className="text-gray-900  font-semibold text-2xl mb-6">Solution</h2>
+              <h2 className="text-gray-900 font-semibold text-2xl mb-6">Solution</h2>
               <p className="text-gray-700 font-sans leading-relaxed mb-4">
                 
               </p>
@@ -76,35 +76,35 @@ export default function PriceSnapContents(){
         <div className="max-w-4xl mx-auto">
           <h2 className="text-gray-900 font-semibold text-2xl mb-6">Breifing</h2>
           <img
-            src="/images/Purpose goal.png"  
+            src="/images/pricesnap/Purpose goal.png"  
             alt="Design Preview"
             className="w-full rounded-2xl object-cover"
           />
 
           <h2 className="text-gray-900 mb-6 font-semibold text-2xl py-12">Design Concept</h2>
           <img
-            src="/images/pricesnap_design.png"  
+            src="/images/pricesnap/pricesnap_design.png"  
             alt="Design Preview"
             className="w-full rounded-2xl object-cover"
           />
 
           <h2 className="text-gray-900 font-semibold text-2xl mb-6 py-12">Sitemap</h2>
           <img
-            src="/images/sitemap.png"  
+            src="/images/pricesnap/Sitemap.png"  
             alt="Design Preview"
             className="w-full rounded-2xl object-cover"
           />
 
           <h2 className="text-gray-900 font-semibold text-2xl mb-6 py-12">Wireframe</h2>
           <img
-            src="/images/wireframe.png"  
+            src="/images/pricesnap/wireframe.png"  
             alt="Design Preview"
             className="w-full rounded-2xl object-cover"
           />
 
           <h2 className="text-gray-900 font-semibold text-2xl mb-6 py-12">Mockup</h2>
           <img
-            src="/images/mockup.png"  
+            src="/images/pricesnap/Mockup.png"  
             alt="Design Preview"
             className="w-full rounded-2xl object-cover"
           />
