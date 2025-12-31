@@ -16,8 +16,8 @@ export default function BlackBondBookContent(){
     />
 
     {/* Overview */}
-    <MotionSection className="px-4 py-20 max-w-6xl mx-auto">
-      <p className="text-gray-700 font-sans leading-relaxed mb-4">
+    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
+      <p className="leading-relaxed mb-4">
         Black Bond Books is a local, independent bookstore in the Vancouver area,
         founded in 1963. With multiple branches and a long-standing presence in the
         community, the bookstore hosts various events and offers a wide range of
@@ -25,25 +25,25 @@ export default function BlackBondBookContent(){
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
         <img
-          src="/images/blackbondbook/store_1.png"
+          src="/images/blackbondbook/store_1.webp"
           alt="Store img 1"
           className="w-full aspect-[4/3] rounded-2xl shadow-lg object-cover"
         />
         <img
-          src="/images/blackbondbook/store_2.png"
+          src="/images/blackbondbook/store_2.webp"
           alt="Store img 2"
           className="w-full aspect-[4/3] rounded-2xl shadow-lg object-cover"
         />
 
         <div className="md:col-span-2 mt-10">
           <h2 className="text-2xl font-semibold mb-6">Challenge</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="leading-relaxed">
             While Black Bond Books has a strong offline identity, its website experience
             presents several UX challenges. Key information such as events, books, and
             authors competes for attention without a clear hierarchy, making it harder
             for users to quickly understand where to focus.
           </p>
-          <p className="text-gray-700 leading-relaxed mt-4">
+          <p className="leading-relaxed mt-4">
             Additionally, inconsistent layouts across pages and limited navigation
             cues increase cognitive load, especially for users who want to browse
             casually or discover something new.
@@ -52,52 +52,52 @@ export default function BlackBondBookContent(){
       </div>
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Research&Ideation</h2>
       <img
         src="/images/blackbondbook/research.gif"
         alt="research"
         className="w-full rounded-2xl shadow-lg object-cover"
       />
-      <p className="text-gray-700 leading-relaxed py-15">
+      <p className="leading-relaxed py-15">
         We researched other bookstore websites for conventional UX design and analyzed the original site.
       </p>
       <img
-          src="/images/blackbondbook/competitors.png"
-          onClick={() => setLightboxSrc("/images/blackbondbook/competitors.png")}
+          src="/images/blackbondbook/competitors.webp"
+          onClick={() => setLightboxSrc("/images/blackbondbook/competitors.webp")}
           className="cursor-zoom-in mb-10 object-cover"
         />
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Moodboard</h2>
       <img
-        src="/images/blackbondbook/moodboard.png"
+        src="/images/blackbondbook/moodboard.webp"
         alt="Store img 2"
         className="w-full shadow-lg object-cover"
       />
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Visual Identity</h2>
       <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mx-auto">
         <img
-          src="/images/blackbondbook/mission_1.png"
+          src="/images/blackbondbook/mission_1.webp"
           alt="Store img 1"
           className="w-full shadow-lg object-cover"
         />
         <img
-          src="/images/blackbondbook/mission_2.png"
+          src="/images/blackbondbook/mission_2.webp"
           alt="Store img 2"
           className="w-full shadow-lg object-cover"
         />
         <img
-          src="/images/blackbondbook/mission_3.png"
+          src="/images/blackbondbook/mission_3.webp"
           alt="Store img 2"
           className="w-full shadow-lg object-cover"
         />
         <img
-          src="/images/blackbondbook/mission_4.png"
+          src="/images/blackbondbook/mission_4.webp"
           alt="Store img 2"
           className="w-full shadow-lg object-cover"
         />
@@ -105,20 +105,20 @@ export default function BlackBondBookContent(){
     </MotionSection>
     
     { /*home*/ }
-    <MotionSection className="px-4 py-20 bg-blue-50">
-      <div className="max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6">Home</h2>
         <img
-          src="/images/blackbondbook/home.png"
-          onClick={() => setLightboxSrc("/images/blackbondbook/home.png")}
+          src="/images/blackbondbook/home.webp"
+          onClick={() => setLightboxSrc("/images/blackbondbook/home.webp")}
           className="cursor-zoom-in mb-10 aspect-[4/3] object-cover rounded-2xl shadow-md"
         />  
-        <p className="pt-5 text-gray-700 leading-relaxed">
+        <p className="pt-5 leading-relaxed">
           The original homepage presented content in a uniform layout, making it
           difficult to distinguish the importance of each section. Users had to scan
           extensively to find events or branch-specific information.
         </p>
-        <p className="pb-5 text-gray-700 leading-relaxed mt-4">
+        <p className="pb-5 leading-relaxed mt-4">
           To address this, each section was given a distinct layout to clarify content
           hierarchy. The static hero image was replaced with an event-focused banner
           that highlights upcoming activities and encourages users to visit physical
@@ -128,15 +128,15 @@ export default function BlackBondBookContent(){
     </MotionSection>
     
     { /*Book List Page*/ }
-    <MotionSection className="px-4 py-20 bg-blue-50">
-      <div className="max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6">Book List Page</h2>
         <img
-          src="/images/blackbondbook/booklist_1.png"
-          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_1.png")}
+          src="/images/blackbondbook/booklist_1.webp"
+          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_1.webp")}
           className="cursor-zoom-in mb-10 aspect-[4/3] object-cover"
         />
-        <p className="mt-5 text-gray-700 leading-relaxed">
+        <p className="mt-5 leading-relaxed">
           The original book list page lacked clear sorting logic, making it difficult
           for users to control how results were displayed.
 
@@ -145,30 +145,30 @@ export default function BlackBondBookContent(){
           book cards to improve readability.
         </p>
         <img
-          src="/images/blackbondbook/booklist_2.png"
-          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_2.png")}
+          src="/images/blackbondbook/booklist_2.webp"
+          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_2.webp")}
           className="cursor-zoom-in mt-30 object-cover"
         />
-        <p className="mt-5 text-gray-700 leading-relaxed mt-4">
+        <p className="mt-5 leading-relaxed mt-4">
           Pagination was replaced with a “View More” button to create a smoother,
           less interruptive browsing experience.
         </p>
       </div>
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-6xl mx-auto">
+    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Book Detail Page</h2>
       <img
-          src="/images/blackbondbook/bookdetail.png"
-          onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail.png")}
+          src="/images/blackbondbook/bookdetail.webp"
+          onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail.webp")}
           className="cursor-zoom-in mb-10 aspect-[4/3] object-cover shadow-md"
         />
-      <p className="text-gray-700 leading-relaxed">
+      <p className="leading-relaxed">
         Important book information was previously scattered, making it harder for
         users to quickly assess key details such as authorship, popularity, or
         categories.
       </p>
-      <p className="text-gray-700 leading-relaxed mt-4">
+      <p className="leading-relaxed mt-4">
         The layout was refined by adding a bestseller label, clearly identifying
         the author, and grouping categories into boxed sections. The “Message From”
         section was rearranged to improve reading flow. Additionally, the right-side
@@ -177,25 +177,25 @@ export default function BlackBondBookContent(){
       </p>
 
       <img
-        src="/images/blackbondbook/bookdetail_2.png"
-        onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail_2.png")}
+        src="/images/blackbondbook/bookdetail_2.webp"
+        onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail_2.webp")}
         className="cursor-zoom-in my-10 aspect-[4/3] object-cover shadow-md"
       />
-      <p className="text-gray-700 leading-relaxed mt-4">Standardized review tab format.</p>
+      <p className="leading-relaxed mt-4">Standardized review tab format.</p>
     </MotionSection>
 
-    <MotionSection className="py-20 max-w-6xl mx-auto">
+    <MotionSection className="py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Author Page</h2>
       <img
-        src="/images/blackbondbook/author.png"
-        onClick={() => setLightboxSrc("/images/blackbondbook/author.png")}
+        src="/images/blackbondbook/author.webp"
+        onClick={() => setLightboxSrc("/images/blackbondbook/author.webp")}
         className="cursor-zoom-in my-10 aspect-[4/3] object-cover shadow-md"
       />
-      <p className="text-gray-700 leading-relaxed">
+      <p className="leading-relaxed">
         Author pages previously lacked visual emphasis, which reduced recognition
         and made it harder for users to connect books with their creators.
       </p>
-      <p className="text-gray-700 leading-relaxed mt-4">
+      <p className="leading-relaxed mt-4">
         Research showed that 4 out of 7 bookstore websites did not include author
         images. In response, the redesign highlights the author’s name more clearly
         and introduces Popular Books and Latest Releases sections to support

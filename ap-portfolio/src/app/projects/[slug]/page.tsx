@@ -18,7 +18,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   );
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       <Navbar />
       <BackButton/>
       <ProjectHero
