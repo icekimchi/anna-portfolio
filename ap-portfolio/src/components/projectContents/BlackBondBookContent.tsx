@@ -17,12 +17,14 @@ export default function BlackBondBookContent(){
 
     {/* Overview */}
     <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <p className="leading-relaxed mb-4">
-        Black Bond Books is a local, independent bookstore in the Vancouver area,
-        founded in 1963. With multiple branches and a long-standing presence in the
-        community, the bookstore hosts various events and offers a wide range of
-        books across genres.
-      </p>
+      <div className="max-w-3xl text-xl">
+        <p className="leading-relaxed mb-10">
+          Black Bond Books is a local, independent bookstore in the Vancouver area,
+          founded in 1963. With multiple branches and a long-standing presence in the
+          community, the bookstore hosts various events and offers a wide range of
+          books across genres.
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
         <img
           src="/images/blackbondbook/store_1.webp"
@@ -36,24 +38,28 @@ export default function BlackBondBookContent(){
         />
 
         <div className="md:col-span-2 mt-10">
-          <h2 className="text-2xl font-semibold mb-6">Challenge</h2>
-          <p className="leading-relaxed">
-            While Black Bond Books has a strong offline identity, its website experience
-            presents several UX challenges. Key information such as events, books, and
-            authors competes for attention without a clear hierarchy, making it harder
-            for users to quickly understand where to focus.
-          </p>
-          <p className="leading-relaxed mt-4">
-            Additionally, inconsistent layouts across pages and limited navigation
-            cues increase cognitive load, especially for users who want to browse
-            casually or discover something new.
-          </p>
+          <div className="max-w-4xl ml-auto">
+            <h2 className="text-3xl font-semibold mb-6">Challenge</h2>
+
+            <p className="leading-relaxed">
+              While Black Bond Books has a strong offline identity, its website experience
+              presents several UX challenges. Key information such as events, books, and
+              authors competes for attention without a clear hierarchy, making it harder
+              for users to quickly understand where to focus.
+            </p>
+
+            <p className="leading-relaxed mt-4">
+              Additionally, inconsistent layouts across pages and limited navigation
+              cues increase cognitive load, especially for users who want to browse
+              casually or discover something new.
+            </p>
+          </div>
         </div>
       </div>
     </MotionSection>
 
     <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-6">Research&Ideation</h2>
+      <h2 className="text-3xl font-semibold mb-6">Research&Ideation</h2>
       <img
         src="/images/blackbondbook/research.gif"
         alt="research"
