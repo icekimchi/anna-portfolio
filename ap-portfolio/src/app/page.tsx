@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
+    <Footer/>
     </main>
   );
 }
