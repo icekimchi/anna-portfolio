@@ -14,7 +14,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (!project) return notFound();
 
   const Content = dynamic(
-    () => import(`@/components/projectContents/${project.contentComponent}`)
+    () => import(`@/components/project/${project.contentComponent}`)
   );
 
   return (
