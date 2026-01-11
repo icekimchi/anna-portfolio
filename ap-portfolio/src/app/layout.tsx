@@ -1,40 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
+import { Inter } from 'next/font/google'
+import SmoothScroll from '@/components/common/SmoothScroll';
+import Navbar from "@/components/common/Navbar";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Anna Park | Software Engineer / UI/UX Designer",
-  description: "I'm a Software Engineer based in Vancouver, CA.",
+  title: "Anna Park | Portfolio",
+  description: "Software Engineer & Product Designer",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.className} pt-[72px]`}>
+        <SmoothScroll>
+          {children}
+          <Navbar />
+        </SmoothScroll>
       </body>
     </html>
-  );
+  )
 }

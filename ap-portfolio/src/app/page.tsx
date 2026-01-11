@@ -1,26 +1,41 @@
 'use client';
 
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
+import Hero from "../components/common/Hero";
+import Navbar from "../components/common/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <Hero />
-        <motion.section
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }}  
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="max-w-6xl mx-auto py-12"
-        >
-        <hr className="border-t border-gray-300" />
-        <h2 className="text-xl font-sans font-semibold mt-8">Selected Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 py-12">
+
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="max-w-7xl mx-auto p-6 md:px-4 md:py-10"
+      >
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row justify-between gap-12 mb-20">
+          <div className="flex items-center gap-4">
+            <span className="block w-12 h-px bg-gray-400" />
+            <h2 className="text-2xl font-medium text-gray-600">
+              Selected Works
+            </h2>
+          </div>
+
+          <p className="max-w-xl text-right text-2xl text-semibold leading-relaxed text-black">
+            Discover curated works that inspire and deliver impact, showcasing
+            creativity, functionality, and design excellence.
+          </p>
+        </div>
+
+        {/* Projects */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
           {projects.map((p) => (
             <ProjectCard
               key={p.slug}
@@ -33,7 +48,8 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
-    <Footer/>
+
+      <Footer />
     </main>
   );
 }

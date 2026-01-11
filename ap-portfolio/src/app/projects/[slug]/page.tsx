@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/Navbar";
-import BackButton from "@/components/BackButton";
+import Navbar from "@/components/common/Navbar";
+import BackButton from "@/components/ui/BackButton";
 import ProjectHero from "@/components/ProjectHero";
 import ProjectInfoBar from "@/components/ProjectInfoBar";
 

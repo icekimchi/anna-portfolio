@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #222222;
-  --foreground: #fafafa;
+  --background: #fafafa;
+  --foreground: #222222;
 }
 
 @theme inline {
@@ -17,6 +17,14 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+html {
+  scroll-behavior: auto !important; 
 }
 
 body {

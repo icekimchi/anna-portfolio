@@ -1,3 +1,5 @@
+"use client";
+
 import { Github, Linkedin, Mail, Globe } from "lucide-react";
 
 export default function SocialLinks() {
