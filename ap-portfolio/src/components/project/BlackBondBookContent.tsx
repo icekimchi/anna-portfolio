@@ -2,6 +2,7 @@
 
 import {MotionSection} from "@/components/MotionSection";
 import ImageLightbox from "@/components/ImageLightbox";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function BlackBondBookContent(){
@@ -16,97 +17,190 @@ export default function BlackBondBookContent(){
     />
 
     {/* Overview */}
-    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <div className="max-w-3xl text-xl">
-        <p className="leading-relaxed mb-10">
-          Black Bond Books is a local, independent bookstore in the Vancouver area,
-          founded in 1963. With multiple branches and a long-standing presence in the
-          community, the bookstore hosts various events and offers a wide range of
-          books across genres.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
-        <img
-          src="/images/blackbondbook/store_1.webp"
-          alt="Store img 1"
-          className="w-full aspect-[4/3] rounded-2xl shadow-lg object-cover"
-        />
-        <img
-          src="/images/blackbondbook/store_2.webp"
-          alt="Store img 2"
-          className="w-full aspect-[4/3] rounded-2xl shadow-lg object-cover"
-        />
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                Work Details
+              </h3>
+            </div>
+          </div>
 
-        <div className="md:col-span-2 mt-10">
-          <div className="max-w-4xl ml-auto">
-            <h2 className="text-3xl font-semibold mb-6">Challenge</h2>
+          {/* Right content */}
+          <div className="md:col-span-2 space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Image 1 */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src="/images/blackbondbook/store_1.webp"
+                  alt="Store img 1"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
 
-            <p className="leading-relaxed">
-              While Black Bond Books has a strong offline identity, its website experience
-              presents several UX challenges. Key information such as events, books, and
-              authors competes for attention without a clear hierarchy, making it harder
-              for users to quickly understand where to focus.
-            </p>
+              {/* Image 2 */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src="/images/blackbondbook/store_2.webp"
+                  alt="Store img 2"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
 
-            <p className="leading-relaxed mt-4">
-              Additionally, inconsistent layouts across pages and limited navigation
-              cues increase cognitive load, especially for users who want to browse
-              casually or discover something new.
-            </p>
+            <div>
+              <h2 className="text-2xl font-medium mb-4">
+                About Black Bond Books
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">                Black Bond Books is a local, independent bookstore in the Vancouver area,
+                founded in 1963. With multiple branches and a long-standing presence in the
+                community, the bookstore hosts various events and offers a wide range of
+                books across genres.
+              </p>
+
+              <h2 className="text-2xl font-medium mb-4">
+                Understanding the challenge
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                While Black Bond Books has a strong offline identity, its website experience
+                presents several UX challenges. Key information such as events, books, and
+                authors competes for attention without a clear hierarchy, making it harder
+                for users to quickly understand where to focus.
+              </p>
+
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Additionally, inconsistent layouts across pages and limited navigation
+                cues increase cognitive load, especially for users who want to browse
+                casually or discover something new.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-semibold mb-6">Research&Ideation</h2>
-      <img
-        src="/images/blackbondbook/research.gif"
-        alt="research"
-        className="w-full rounded-2xl shadow-lg object-cover"
-      />
-      <p className="leading-relaxed py-15">
-        We researched other bookstore websites for conventional UX design and analyzed the original site.
-      </p>
-      <img
-          src="/images/blackbondbook/competitors.webp"
-          onClick={() => setLightboxSrc("/images/blackbondbook/competitors.webp")}
-          className="cursor-zoom-in mb-10 object-cover"
-        />
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                UI Research & Ideation
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2 space-y-10">
+            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg">
+              <Image
+                src="/images/blackbondbook/research.gif"
+                alt="UI research"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            <p className="text-gray-600 leading-relaxed">
+              In Vancouver, the same product is often sold at different prices across stores.
+              When I first arrived in Vancouver, I was surprised by these price differences.
+              This application allows users to conveniently compare prices among different stores.
+            </p>
+            <h2 className="text-2xl font-medium mb-4">
+              Competitors Research
+            </h2>
+            <div onClick={() => setLightboxSrc("/images/blackbondbook/competitors.webp")}
+              className="relative w-full">
+              <Image
+                src="/images/blackbondbook/competitors.webp"
+                alt="Competitors"
+                width={1000}
+                height={700}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </MotionSection>
+    
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                Moodboard
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2">
+            <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/blackbondbook/moodboard.webp"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </MotionSection>
 
-    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-6">Moodboard</h2>
-      <img
-        src="/images/blackbondbook/moodboard.webp"
-        alt="Store img 2"
-        className="w-full shadow-lg object-cover"
-      />
-    </MotionSection>
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                Visual Identity
+              </h3>
+            </div>
+          </div>
 
-    <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-6">Visual Identity</h2>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mx-auto">
-        <img
-          src="/images/blackbondbook/mission_1.webp"
-          alt="Store img 1"
-          className="w-full shadow-lg object-cover"
-        />
-        <img
-          src="/images/blackbondbook/mission_2.webp"
-          alt="Store img 2"
-          className="w-full shadow-lg object-cover"
-        />
-        <img
-          src="/images/blackbondbook/mission_3.webp"
-          alt="Store img 2"
-          className="w-full shadow-lg object-cover"
-        />
-        <img
-          src="/images/blackbondbook/mission_4.webp"
-          alt="Store img 2"
-          className="w-full shadow-lg object-cover"
-        />
+          {/* Right content */}
+          <div className="md:col-span-2">
+            <div className="grid grid-cols-2 gap-6">
+              {["mission_1","mission_2","mission_3","mission_4"].map((img) => (
+                <div
+                  key={img}
+                  onClick={() => setLightboxSrc(`/images/blackbondbook/${img}.webp`)}
+                  className="relative w-full aspect-[16/9] overflow-hidden"
+                >
+                  <Image
+                    src={`/images/blackbondbook/${img}.webp`}
+                    alt={img}
+                    fill
+                    className="object-cover shadow-lg"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </MotionSection>
     

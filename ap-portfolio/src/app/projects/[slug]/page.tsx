@@ -4,13 +4,16 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/common/Navbar";
 import BackButton from "@/components/ui/BackButton";
 import ProjectHero from "@/components/ProjectHero";
-import ProjectInfoBar from "@/components/ProjectInfoBar";
 import Footer from "@/components/common/Footer";
 
+export default async function ProjectPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = await params;
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) return notFound();
 
@@ -21,9 +24,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <BackButton/>
+      <BackButton />
       <ProjectHero
-        title = {project.title}
+        title={project.title}
         description={project.description}
         image={project.image}
         role={project.role}
@@ -31,7 +34,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         date={project.date}
       />
       <Content />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

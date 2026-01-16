@@ -131,14 +131,15 @@ export default function PriceSnapContents(){
 
           {/* Right content */}
           <div className="md:col-span-2">
-            <div className="relative w-full max-h-[420px] aspect-[16/9]">
-              <Image
-                src="/images/pricesnap/whypricesnap.png"
-                alt="Overview of Project"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <div className="relative w-full aspect-[16/9]">
+            <Image
+              src="/images/pricesnap/whypricesnap.png"
+              alt="Overview of Project"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
           </div>
 
         </div>

@@ -16,19 +16,14 @@ export default function ProjectCard({
   title,
   role,
   description,
-  slug,
   image,
 }: ProjectCardProps) {
   return (
-  <motion.div
-    initial="rest"
-    animate="rest"
-    whileHover="hover"
-    className="h-full"
-  >
-    <Link
-      href={`/projects/${slug}`}
-      className="group block px-3 py-3 bg-stone-50 rounded-sm"
+    <motion.div
+      initial="rest"
+      animate="rest"
+      whileHover="hover"
+      className="h-full group px-3 py-3 bg-stone-50 rounded-sm"
     >
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden rounded-sm">
@@ -62,7 +57,6 @@ export default function ProjectCard({
           {description}
         </p>
       </div>
-    </Link>
-  </motion.div>
-);
+    </motion.div>
+  );
 }

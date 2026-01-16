@@ -8,6 +8,11 @@ import { projects } from "@/data/projects";
 import Footer from "../components/common/Footer";
 import CustomCursor from "@/components/ui/CustomerCursor";
 import StickySection from "@/components/ui/StickySection";
+import Link from "next/link";
+
+const preloadProjectContent = (component: string) => {
+  import(`@/components/project/${component}`);
+};
 
 export default function Home() {
   return (
@@ -40,14 +45,24 @@ export default function Home() {
         {/* Projects */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
           {projects.map((p) => (
-            <ProjectCard
+            <div
               key={p.slug}
-              title={p.title}
-              role={p.role}
-              description={p.description}
-              slug={p.slug}
-              image={p.image}
-            />
+              onMouseEnter={() => preloadProjectContent(p.contentComponent)}
+            >
+              <Link
+                href={`/projects/${p.slug}`}
+                prefetch
+                className="block h-full"
+              >
+                <ProjectCard
+                  title={p.title}
+                  role={p.role}
+                  description={p.description}
+                  slug={p.slug}
+                  image={p.image}
+                />
+              </Link>
+            </div>
           ))}
         </div>
       </motion.section>
