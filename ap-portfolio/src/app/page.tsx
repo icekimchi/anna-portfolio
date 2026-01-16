@@ -6,10 +6,13 @@ import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import Footer from "../components/common/Footer";
+import CustomCursor from "@/components/ui/CustomerCursor";
+import StickySection from "@/components/ui/StickySection";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <CustomCursor/>
       <Navbar />
       <Hero />
 
@@ -20,7 +23,7 @@ export default function Home() {
         className="max-w-7xl mx-auto p-6 md:px-4 md:py-10"
       >
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between gap-12 mb-20">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-12 my-20">
           <div className="flex items-center gap-4">
             <span className="block w-12 h-px bg-gray-400" />
             <h2 className="text-2xl font-medium text-gray-600">
@@ -28,7 +31,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <p className="max-w-xl text-right text-2xl text-semibold leading-relaxed text-black">
+          <p className="max-w-xl text-right text-2xl text-bold leading-relaxed text-black">
             Discover curated works that inspire and deliver impact, showcasing
             creativity, functionality, and design excellence.
           </p>
@@ -48,6 +51,8 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
+
+      <StickySection/>
 
       <Footer />
     </main>

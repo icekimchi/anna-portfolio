@@ -7,7 +7,7 @@ export default function CustomCursor() {
   const cursorY = useMotionValue(-100);
 
   // Spring -> Smooth Following Effect
-  const springConfig = { damping: 25, stiffness: 700 };
+  const springConfig = { damping: 30, stiffness: 250 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 

@@ -14,7 +14,7 @@ export default function ProjectInfoBar({ title, date, role, skills }: ProjectInf
           <p>{title}</p>
         </div>
         <div>
-          <h3 className="text-white/60 mb-2 uppercase tracking-wider">Date</h3>
+          <h3 className="text-f/60 mb-2 uppercase tracking-wider">Date</h3>
           <p>{date}</p>
         </div>
         <div>
