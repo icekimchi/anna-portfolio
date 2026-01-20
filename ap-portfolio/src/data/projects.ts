@@ -31,14 +31,24 @@ export const projects: Project[] = [
     contentComponent: "BlackBondBookContent",
   },
   {
-    title: "Portfolio Site",
+    title: "The Valthakan Times",
     role: "Full Stack Developer",
-    description: "Integrated app that allows users to conveniently compare prices across multiple drugstores in Vancouver.",
-    slug: "portfolio",
+    description: "Redesign client's Personal Newsletter page",
+    slug: "The-Valthakan-Times",
     image: "/images/project3.png",
     date: "June 2025",
     skills: ["Figma", "Prototyping"],
-    contentComponent: "PriceSnapContent",
+    contentComponent: "TheValthakanTimesContent",
+  },
+  {
+    title: "Good City Transit Campaign",
+    role: "Visual Branding",
+    description: "Redesign client's Personal Newsletter page",
+    slug: "Good-City-Transit-Campaign",
+    image: "/images/project3.png",
+    date: "Jan 2026",
+    skills: ["Visual Branding", "Visual Identity"],
+    contentComponent: "TheValthakanTimesContent",
   },
 ];
 
