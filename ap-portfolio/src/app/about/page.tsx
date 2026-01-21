@@ -25,7 +25,7 @@ export default function About() {
               <h4 className="text-3xl font-bold mt-2 mb-4">Content Prioritization</h4>
               <p className="text-slate-600 mb-6">
                 The existing site suffered from confusing navigation, leading to high churn. I reorganized the IA to prioritize 
-                high-value assets like the <strong>"Dear Crone"</strong> advice column, ensuring the site&apos;s biggest reader draw is front and center.
+                high-value assets like the Dear Crone advice column, ensuring the site&apos;s biggest reader draw is front and center.
               </p>
             </div>
           </div>

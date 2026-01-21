@@ -37,7 +37,7 @@ export default function TheValthakanTimesContent() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               {/*  */}
               <Image 
-                src="/images/project-hero.png" // 실제 이미지 경로로 수정하세요
+                src="/images/project-hero.png" 
                 alt="Project Hero Thumbnail"
                 fill
                 className="object-cover"
@@ -66,7 +66,7 @@ export default function TheValthakanTimesContent() {
                 <h4 className="text-3xl font-bold mt-2 mb-4">Content Prioritization</h4>
                 <p className="text-slate-600 mb-6">
                   The existing site suffered from confusing navigation, leading to high churn. I reorganized the IA to prioritize 
-                  high-value assets like the <strong>"Dear Crone"</strong> advice column, ensuring the site&apos;s biggest reader draw is front and center.
+                  high-value assets like the <strong>"Dear Crone"</strong> advice column, ensuring the sites biggest reader draw is front and center.
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function TheValthakanTimesContent() {
             <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 font-sans">Design System</h3>
             <h2 className="text-4xl font-serif font-bold mb-8">Fantasy-Modern Aesthetic</h2>
             <p className="text-lg text-slate-600 mb-12 italic">
-              "Friendly, Humorous, and Blunt"
+              Friendly, Humorous, and Blunt
             </p>
           </div>
           
