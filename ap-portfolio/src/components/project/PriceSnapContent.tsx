@@ -2,11 +2,71 @@
 
 import {MotionSection} from "@/components/MotionSection";
 import Image from "next/image";
+import ImpactSummarySection from "../ui/ImpactSummarySection";
 
 export default function PriceSnapContents(){
     return(
     <>
     {/* Overview */}
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <div className="lg:col-span-2">
+        <ImpactSummarySection
+          title="Improved Information Fragmentation in Vancouver’s Grocery Market."
+          description="In Vancouver, the same product is often sold at different prices across stores.
+                      When I first arrived in Vancouver, I was surprised by these price differences.
+                      This application allows users to conveniently compare prices among different stores."
+          highlights=
+          {[
+            {
+            icon: "💡",
+            text: "I designed a standardized UI Card System to harmonize inconsistent data formats from various retailers.",
+            },
+            {
+              icon: "🎨",
+              text: "Developed a clean, modern Visual Identity using a fresh color palette and SF Pro typography to establish credibility in a utility-focused product."
+            }
+          ]}
+        />
+      </div>
+
+    {/* Right image */}
+      <div>
+        <img
+          src="/images/pricesnap/mockup_home.png"
+          alt="Pricesnap Mockup"
+          className="rounded-2xl object-cover"
+        />
+      </div>
+    </div>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/pricesnap/overview.png"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+      </div>
+    </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/pricesnap/overview_2.png"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+      </div>
+    </MotionSection>
+    
     <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -41,16 +101,6 @@ export default function PriceSnapContents(){
                 In Vancouver, the same product is often sold at different prices across stores.
                 When I first arrived in Vancouver, I was surprised by these price differences.
                 This application allows users to conveniently compare prices among different stores.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-medium mb-4">
-                Designing a seamless experience
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                After conducting market research, I found that there were already various websites that compare product prices across stores.
-                However, due to the following issues, I decided to develop PriceSnap.
               </p>
             </div>
           </div>
@@ -132,20 +182,19 @@ export default function PriceSnapContents(){
           {/* Right content */}
           <div className="md:col-span-2">
             <div className="relative w-full aspect-[16/9]">
-            <Image
-              src="/images/pricesnap/whypricesnap.png"
-              alt="Overview of Project"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+              <Image
+                src="/images/pricesnap/whypricesnap.png"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
 
         </div>
       </div>
     </MotionSection>
-
     </>
     )
 }

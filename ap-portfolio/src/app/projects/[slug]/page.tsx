@@ -32,6 +32,8 @@ export default async function ProjectPage({
         role={project.role}
         skills={project.skills}
         date={project.date}
+        tags={project.tags}
+        team={project.team}
       />
       <Content />
       <Footer />
