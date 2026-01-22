@@ -53,10 +53,10 @@ export const projects: Project[] = [
     role: "Visual Branding",
     description: "Redesign client's Personal Newsletter page",
     slug: "Good-City-Transit-Campaign",
-    image: "/images/project3.png",
+    image: "/images/goodcitytransit.png",
     date: "Jan 2026",
     skills: ["Visual Branding", "Visual Identity"],
-    contentComponent: "TheValthakanTimesContent",
+    contentComponent: "GoodCityTransitContent",
     team: "Personal",
     tags: ["VISUAL IDENTITY", "BRAND DESIGN", "2026"]
   },
