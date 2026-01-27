@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "PriceSnap",
-    role: "UI/UX Designer",
+    role: "UI/UX Design",
     description: "Integrated app that allows users to conveniently compare prices across multiple drugstores in Vancouver.",
     slug: "pricesnap",
     image: "/images/pricesnap/thumbnail.png",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   },
   {
     title: "The Black Bonds Redesign",
-    role: "UX Design",
+    role: "UI/UX Design",
     description: "Redesign \"Black Bond Books\" website, where is a local, independent bookstore in the Vancouver",
     slug: "BlackBondBook",
     image: "/images/project2.png",
@@ -38,12 +38,12 @@ export const projects: Project[] = [
   },
   {
     title: "The Valthakan Times",
-    role: "Full Stack Developer",
+    role: "Web Development",
     description: "Redesign client's Personal Newsletter page",
     slug: "The-Valthakan-Times",
-    image: "/images/project3.png",
+    image: "/images/thevalthakantimes.png",
     date: "Oct ~ Nov 2025",
-    skills: ["Figma", "Prototyping"],
+    skills: ["Next.js", "React", "Tailwind CSS"],
     contentComponent: "TheValthakanTimesContent",
     team: "5 UI/UX Designer",
     tags: ["FULL PROCESS", "CLIENT PROJECT", "2025"]

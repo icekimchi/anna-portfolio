@@ -38,36 +38,8 @@ export default function PriceSnapContents(){
         />
       </div>
     </div>
-
-    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative w-full aspect-[16/9]">
-              <Image
-                src="/images/pricesnap/overview.png"
-                alt="Overview of Project"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-      </div>
-    </MotionSection>
-
-    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative w-full aspect-[16/9]">
-              <Image
-                src="/images/pricesnap/overview_2.png"
-                alt="Overview of Project"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-      </div>
-    </MotionSection>
     
-    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+    <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
@@ -76,7 +48,7 @@ export default function PriceSnapContents(){
             <div className="flex items-center gap-4 text-gray-600">
               <span className="block w-10 h-px bg-gray-600" />
               <h3 className="uppercase tracking-wide text-xl">
-                Work Details
+                Overview
               </h3>
             </div>
           </div>
@@ -109,46 +81,29 @@ export default function PriceSnapContents(){
       </div>
     </MotionSection>
 
-    {/* Problem & Solution */}
-    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+      <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
           {/* Left label */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-4 text-gray-600">
               <span className="block w-10 h-px bg-gray-600" />
               <h3 className="uppercase tracking-wide text-xl">
-                Problem & Solution
+                Design Goal
               </h3>
             </div>
           </div>
+          
 
-          {/*Right label */}
+          {/* Right content */}
           <div className="md:col-span-2 space-y-10">
-            <div>
-              <h2 className="text-2xl font-medium mb-4">Problem</h2>
-              <ul className="space-y-3 font-sans text-gray-700">
-                <li className="flex gap-2">
-                  <span className="text-red-500 flex-shrink-0">•</span>
-                  <span>Users must visit each market’s website to check prices.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-red-500 flex-shrink-0">•</span>
-                  <span>The service cannot be used without creating an account.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-red-500 flex-shrink-0">•</span>
-                  <span>It is difficult to browse and compare across different markets.</span>
-                </li>
-              </ul>
-            </div>
-
             <div>
               <h2 className="text-2xl font-medium mb-4">Solution</h2>
               <ul className="space-y-3  font-sans text-gray-700">
                 <li className="flex gap-2">
                   <span className="text-green-500 flex-shrink-0">✓</span>
-                  <span>Integrated into a single app</span>
+                  <div>Unified Data Integration</div>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-green-500 flex-shrink-0">✓</span>
@@ -160,30 +115,39 @@ export default function PriceSnapContents(){
                 </li>
               </ul>
             </div>
+
+            <Image
+              src="/images/pricesnap/designgoal.svg"
+              alt="Design Goal"
+              width={1200}
+              height={800}  
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </div>
     </MotionSection>
 
     <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
           {/* Left label */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-4 text-gray-600">
               <span className="block w-10 h-px bg-gray-600" />
               <h3 className="uppercase tracking-wide text-xl">
-                Briefing
+                Color System
               </h3>
             </div>
           </div>
 
           {/* Right content */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 space-y-10">
             <div className="relative w-full aspect-[16/9]">
               <Image
-                src="/images/pricesnap/whypricesnap.png"
+                src="/images/pricesnap/color.svg"
                 alt="Overview of Project"
                 fill
                 className="object-contain"
@@ -191,10 +155,37 @@ export default function PriceSnapContents(){
               />
             </div>
           </div>
-
         </div>
       </div>
     </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/pricesnap/overview.svg"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+      </div>
+    </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/pricesnap/overview_2.png"
+                alt="Overview of Project"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+      </div>
+    </MotionSection> 
     </>
     )
 }
