@@ -132,7 +132,7 @@ export default function PriceSnapContents() {
                   Sketch
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  I started by thinking about icons from the word "Goods" and "City".
+                  I started by thinking about icons from the word &quot;Goods&quot; and &quot;City&quot;.
                   And then I sketched ideas on my iPad.
                   Then, when I looked at the SkyTrain map, I wanted to use the dot from the map.
                 </p>
