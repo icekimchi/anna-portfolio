@@ -41,45 +41,130 @@ export default function PriceSnapContents() {
         </div>
       </div>
 
-      {/* Research Board */}
-      <MotionSection className="px-4 py-12 sm:px-8 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9]">
-            <Image
-              src="/images/goodcitytransit/researchboard.jpg"
-              alt="Research Board"
-              fill
-              className="object-contain rounded-xl"
-              sizes="100vw"
-            />
+      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            {/* Left label */}
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-4 text-gray-600">
+                <span className="block w-10 h-px bg-gray-600" />
+                <h3 className="uppercase tracking-wide text-xl">
+                  Mindmap
+                </h3>
+              </div>
+            </div>
+
+            {/* Right content */}
+            <div className="md:col-span-2 space-y-10">
+              <div>
+                <h2 className="text-2xl font-medium mb-4">
+                  Summary
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Five keywords came to my mind. And, I got more inspiration from Public and Vancouver.
+                  Instead of using new colors, I wanted to focus on respsect and public space first.
+                </p>
+              </div>
+
+              <div className="relative w-full aspect-[16/9]">
+                <Image
+                  src="/images/goodcitytransit/mindmap.png"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </MotionSection>
 
-      {/* Mindmap */}
-      <MotionSection className="px-4 py-12 sm:px-8 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9]">
-            <Image
-              src="/images/goodcitytransit/mindmap_1.png"
-              alt="Mindmap"
-              fill
-              className="object-contain rounded-xl"
-              sizes="100vw"
-            />
-          </div>
+      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            {/* Left label */}
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-4 text-gray-600">
+                <span className="block w-10 h-px bg-gray-600" />
+                <h3 className="uppercase tracking-wide text-xl">
+                  Research Board
+                </h3>
+              </div>
+            </div>
 
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9]">
-            <Image
-              src="/images/goodcitytransit/mindmap_2.png"
-              alt="Research Board"
-              fill
-              className="object-contain rounded-xl"
-              sizes="100vw"
-            />
+            {/* Right content */}
+            <div className="md:col-span-2 space-y-10">
+              <div className="relative w-full aspect-[4/3]">
+                <Image
+                  src="/images/goodcitytransit/researchboard.jpg"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </MotionSection>
+      
+      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            {/* Left label */}
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-4 text-gray-600">
+                <span className="block w-10 h-px bg-gray-600" />
+                <h3 className="uppercase tracking-wide text-xl">
+                  Logo Development
+                </h3>
+              </div>
+            </div>
+
+            {/* Right content */}
+            <div className="md:col-span-2 space-y-10">
+              <div>
+                <h2 className="text-2xl font-medium mb-4">
+                  Sketch
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  I started by thinking about icons from the word "Goods" and "City".
+                  And then I sketched ideas on my iPad.
+                  Then, when I looked at the SkyTrain map, I wanted to use the dot from the map.
+                </p>
+              </div>
+
+              <div className="relative w-full aspect-[16/9]">
+                <Image
+                  src="/images/goodcitytransit/logodevelopment.png"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+
+              <h2 className="text-2xl font-medium mb-4">
+                Inspiration
+              </h2>
+              <div className="relative w-full aspect-[16/9]">
+                <Image
+                  src="/images/goodcitytransit/logoinspiration.png"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </MotionSection>
+      
     </>
   )
 }
