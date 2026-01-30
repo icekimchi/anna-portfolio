@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[calc(100vh-72px)] overflow-hidden bg-stone-50">
+    <section className="relative w-full h-[calc(84vh-72px)] overflow-hidden bg-stone-50">
 
       <div className="mx-auto max-w-7xl h-full flex flex-col justify-between p-6 md:px-4 md:py-10">
 

@@ -97,20 +97,54 @@ export default function BlackBondBookContent(){
             <div className="flex items-center gap-4 text-gray-600">
               <span className="block w-10 h-px bg-gray-600" />
               <h3 className="uppercase tracking-wide text-xl">
-                UI Research & Ideation
+                Design Approach
               </h3>
             </div>
           </div>
 
           {/* Right content */}
           <div className="md:col-span-2 space-y-10">
-            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg">
+            <div className="flex justify-left py-4"> 
               <Image
-                src="/images/blackbondbook/research.gif"
-                alt="UI research"
-                fill
-                className="object-contain"
-                priority
+                src="/images/blackbondbook/order.jpg"
+                alt="Process Steps"
+                width={800} 
+                height={200} 
+                className="rounded-lg" 
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                UX Research & Ideation
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2 space-y-10">
+            <h2 className="text-2xl font-medium mb-4">
+              Competitors Research
+            </h2>
+
+            <div className="flex justify-left py-4"> 
+              <Image
+                src="/images/blackbondbook/competitor.jpg"
+                alt="Process Steps"
+                width={800} 
+                height={200} 
+                className="rounded-lg" 
               />
             </div>
 
@@ -119,19 +153,7 @@ export default function BlackBondBookContent(){
               When I first arrived in Vancouver, I was surprised by these price differences.
               This application allows users to conveniently compare prices among different stores.
             </p>
-            <h2 className="text-2xl font-medium mb-4">
-              Competitors Research
-            </h2>
-            <div onClick={() => setLightboxSrc("/images/blackbondbook/competitors.webp")}
-              className="relative w-full">
-              <Image
-                src="/images/blackbondbook/competitors.webp"
-                alt="Competitors"
-                width={1000}
-                height={700}
-                className="w-full h-auto"
-              />
-            </div>
+            
           </div>
         </div>
       </div>
@@ -183,6 +205,22 @@ export default function BlackBondBookContent(){
 
           {/* Right content */}
           <div className="md:col-span-2">
+            <div className="flex justify-left py-4"> 
+              <Image
+                src="/images/blackbondbook/colors.png"
+                alt="Process Steps"
+                width={800} 
+                height={200} 
+                className="rounded-lg" 
+              />
+            </div>
+
+            <p className="text-gray-600 leading-relaxed py-10">
+              While maintaining the original color scheme, I adjusted the base, main, and accent colors to improve clarity and consistency.
+              The original palette used beige as the base, mint blue as the main color, and red as the accent.
+              I refined this to a white base, black primary color, and mint accent, resulting in a more modern and balanced visual system.
+            </p>
+
             <div className="grid grid-cols-2 gap-6">
               {["mission_1","mission_2","mission_3","mission_4"].map((img) => (
                 <div
