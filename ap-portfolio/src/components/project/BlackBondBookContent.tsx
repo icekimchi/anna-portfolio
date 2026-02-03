@@ -3,11 +3,27 @@
 import {MotionSection} from "@/components/MotionSection";
 import ImageLightbox from "@/components/ImageLightbox";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function BlackBondBookContent(){
   
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (lightboxSrc) {
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      
+      return () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [lightboxSrc]);
 
     return(
     <>
@@ -241,39 +257,105 @@ export default function BlackBondBookContent(){
         </div>
       </div>
     </MotionSection>
-    
-    { /*home*/ }
-    <MotionSection className="px-4 py-20">
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20 bg-[#222222]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-6">Home</h2>
-        <img
-          src="/images/blackbondbook/home.webp"
-          onClick={() => setLightboxSrc("/images/blackbondbook/home.webp")}
-          className="cursor-zoom-in mb-10 aspect-[4/3] object-cover rounded-2xl shadow-md"
-        />  
-        <p className="pt-5 leading-relaxed">
-          The original homepage presented content in a uniform layout, making it
-          difficult to distinguish the importance of each section. Users had to scan
-          extensively to find events or branch-specific information.
-        </p>
-        <p className="pb-5 leading-relaxed mt-4">
-          To address this, each section was given a distinct layout to clarify content
-          hierarchy. The static hero image was replaced with an event-focused banner
-          that highlights upcoming activities and encourages users to visit physical
-          stores, reinforcing the bookstore’s community-driven identity.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-white">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl color-white">
+                Home page
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2">
+            <p className="leading-relaxed text-white">
+              The original homepage presented content in a uniform layout, making it
+              difficult to distinguish the importance of each section. Users had to scan
+              extensively to find events or branch-specific information.
+            </p>
+            <p className="pb-15 leading-relaxed py-10 text-white">
+              To address this, each section was given a distinct layout to clarify content
+              hierarchy. The static hero image was replaced with an event-focused banner
+              that highlights upcoming activities and encourages users to visit physical
+              stores, reinforcing the bookstore’s community-driven identity.
+            </p>
+            
+            <div
+                className="relative w-full aspect-[6326/10222] cursor-zoom-in"
+                onClick={() =>
+                  setLightboxSrc("/images/blackbondbook/homepage.webp")
+                }
+              >
+                <Image
+                  src="/images/blackbondbook/homepage.webp"
+                  alt="Homepage"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                />
+            </div>
+          </div>
+        </div>
       </div>
     </MotionSection>
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20 bg-[#222222]">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-white">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl color-white">
+                Home page
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2">
+            <p className="leading-relaxed text-white">
+              The original homepage presented content in a uniform layout, making it
+              difficult to distinguish the importance of each section. Users had to scan
+              extensively to find events or branch-specific information.
+            </p>
+            <p className="pb-15 leading-relaxed py-10 text-white">
+              To address this, each section was given a distinct layout to clarify content
+              hierarchy. The static hero image was replaced with an event-focused banner
+              that highlights upcoming activities and encourages users to visit physical
+              stores, reinforcing the bookstore’s community-driven identity.
+            </p>
+            
+            <div
+                className="relative w-full aspect-[5044/4484] cursor-zoom-in"
+                onClick={() =>
+                  setLightboxSrc("/images/blackbondbook/detail.webp")
+                }
+              >
+                <Image
+                  src="/images/blackbondbook/detail.webp"
+                  alt="Homepage"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+    </MotionSection>
+  
     
     { /*Book List Page*/ }
     <MotionSection className="px-4 py-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6">Book List Page</h2>
-        <img
-          src="/images/blackbondbook/booklist_1.webp"
-          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_1.webp")}
-          className="cursor-zoom-in mb-10 aspect-[4/3] object-cover"
-        />
         <p className="mt-5 leading-relaxed">
           The original book list page lacked clear sorting logic, making it difficult
           for users to control how results were displayed.
@@ -282,25 +364,11 @@ export default function BlackBondBookContent(){
           to align with common user expectations. Visual hierarchy was applied within
           book cards to improve readability.
         </p>
-        <img
-          src="/images/blackbondbook/booklist_2.webp"
-          onClick={() => setLightboxSrc("/images/blackbondbook/booklist_2.webp")}
-          className="cursor-zoom-in mt-30 object-cover"
-        />
-        <p className="mt-5 leading-relaxed mt-4">
-          Pagination was replaced with a “View More” button to create a smoother,
-          less interruptive browsing experience.
-        </p>
       </div>
     </MotionSection>
 
     <MotionSection className="px-4 py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Book Detail Page</h2>
-      <img
-          src="/images/blackbondbook/bookdetail.webp"
-          onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail.webp")}
-          className="cursor-zoom-in mb-10 aspect-[4/3] object-cover shadow-md"
-        />
       <p className="leading-relaxed">
         Important book information was previously scattered, making it harder for
         users to quickly assess key details such as authorship, popularity, or
@@ -314,21 +382,14 @@ export default function BlackBondBookContent(){
         standardized for consistency across the site.
       </p>
 
-      <img
-        src="/images/blackbondbook/bookdetail_2.webp"
-        onClick={() => setLightboxSrc("/images/blackbondbook/bookdetail_2.webp")}
-        className="cursor-zoom-in my-10 aspect-[4/3] object-cover shadow-md"
-      />
+
       <p className="leading-relaxed mt-4">Standardized review tab format.</p>
+
+      
     </MotionSection>
 
     <MotionSection className="py-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-semibold mb-6">Author Page</h2>
-      <img
-        src="/images/blackbondbook/author.webp"
-        onClick={() => setLightboxSrc("/images/blackbondbook/author.webp")}
-        className="cursor-zoom-in my-10 aspect-[4/3] object-cover shadow-md"
-      />
       <p className="leading-relaxed">
         Author pages previously lacked visual emphasis, which reduced recognition
         and made it harder for users to connect books with their creators.
