@@ -77,32 +77,118 @@ export default function BlackBondBookContent(){
               <h2 className="text-2xl font-medium mb-4">
                 About Black Bond Books
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">                Black Bond Books is a local, independent bookstore in the Vancouver area,
+
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Black Bond Books is a local, independent bookstore in the Vancouver area,
                 founded in 1963. With multiple branches and a long-standing presence in the
                 community, the bookstore hosts various events and offers a wide range of
                 books across genres.
               </p>
 
-              <h2 className="text-2xl font-medium mb-4">
-                Understanding the challenge
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                While Black Bond Books has a strong offline identity, its website experience
-                presents several UX challenges. Key information such as events, books, and
-                authors competes for attention without a clear hierarchy, making it harder
-                for users to quickly understand where to focus.
-              </p>
+              <div>
+                <h2 className="text-2xl font-medium mt-6 mb-3">
+                  Challenges
+                </h2>
 
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Additionally, inconsistent layouts across pages and limited navigation
-                cues increase cognitive load, especially for users who want to browse
-                casually or discover something new.
-              </p>
+                <ul className="space-y-4 font-sans text-gray-700">
+                  <li className="flex gap-3">
+                    <span className="text-red-500 flex-shrink-0">✓</span>
+                    <span>
+                      The homepage lacked a clear visual hierarchy.
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="text-red-500 flex-shrink-0">✓</span>
+                    <span>
+                      The overall visual design felt outdated, negatively impacting the
+                      first impression and perceived usability.
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="text-red-500 flex-shrink-0">✓</span>
+                    <span>
+                      In usability testing with over a dozen users, only 2 out of 5 core
+                      tasks were completed successfully, and none were completed smoothly.
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="text-red-500 flex-shrink-0">✓</span>
+                    <span>
+                      Users frequently hesitated or took inefficient paths, revealing issues
+                      in information architecture and interaction clarity.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20 bg-[#222222]">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                Solution 1
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2 space-y-10">
+            <div className="relative w-full aspect-[1234/930]">
+                <Image
+                  src="/images/blackbondbook/banner.webp"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+          </div>
+        </div>
+      </div>
+    </MotionSection>
+
+    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20 bg-[#222222]">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          {/* Left label */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="block w-10 h-px bg-gray-600" />
+              <h3 className="uppercase tracking-wide text-xl">
+                Solution 2
+              </h3>
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="md:col-span-2 space-y-10">
+            <div className="relative w-full aspect-[1234/930]">
+                <Image
+                  src="/images/blackbondbook/content.webp"
+                  alt="Overview of Project"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+          </div>
+        </div>
+      </div>
+    </MotionSection>
+
 
     <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
       <div className="mx-auto max-w-7xl">
@@ -120,56 +206,15 @@ export default function BlackBondBookContent(){
 
           {/* Right content */}
           <div className="md:col-span-2 space-y-10">
-            <div className="flex justify-left py-4"> 
+            <div className="flex justify-left"> 
               <Image
-                src="/images/blackbondbook/order.jpg"
+                src="/images/blackbondbook/order.png"
                 alt="Process Steps"
                 width={800} 
                 height={200} 
                 className="rounded-lg" 
               />
             </div>
-          </div>
-        </div>
-      </div>
-    </MotionSection>
-
-    <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          
-          {/* Left label */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-4 text-gray-600">
-              <span className="block w-10 h-px bg-gray-600" />
-              <h3 className="uppercase tracking-wide text-xl">
-                UX Research & Ideation
-              </h3>
-            </div>
-          </div>
-
-          {/* Right content */}
-          <div className="md:col-span-2 space-y-10">
-            <h2 className="text-2xl font-medium mb-4">
-              Competitors Research
-            </h2>
-
-            <div className="flex justify-left py-4"> 
-              <Image
-                src="/images/blackbondbook/competitor.jpg"
-                alt="Process Steps"
-                width={800} 
-                height={200} 
-                className="rounded-lg" 
-              />
-            </div>
-
-            <p className="text-gray-600 leading-relaxed">
-              In Vancouver, the same product is often sold at different prices across stores.
-              When I first arrived in Vancouver, I was surprised by these price differences.
-              This application allows users to conveniently compare prices among different stores.
-            </p>
-            
           </div>
         </div>
       </div>
@@ -381,11 +426,7 @@ export default function BlackBondBookContent(){
         back button was replaced with breadcrumb navigation, and review tabs were
         standardized for consistency across the site.
       </p>
-
-
       <p className="leading-relaxed mt-4">Standardized review tab format.</p>
-
-      
     </MotionSection>
 
     <MotionSection className="py-20 max-w-7xl mx-auto">

@@ -19,7 +19,6 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
       <CustomCursor/>
       <Navbar />
-      <Hero />
 
       <motion.section
         initial={{ opacity: 0, y: 20 }}

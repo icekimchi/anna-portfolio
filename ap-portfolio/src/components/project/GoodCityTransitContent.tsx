@@ -3,45 +3,71 @@
 import { MotionSection } from "@/components/MotionSection";
 import Image from "next/image";
 import ImpactSummarySection from "../ui/ImpactSummarySection";
+import ImageLightbox from "@/components/ImageLightbox";
+import { useState, useEffect } from "react";
+
 
 export default function PriceSnapContents() {
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  
+    useEffect(() => {
+      if (lightboxSrc) {
+        const scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
+        
+        return () => {
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          window.scrollTo(0, scrollY);
+        };
+      }
+    }, [lightboxSrc]);
+  
   return (
     <>
-      {/* Overview */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 px-4 sm:px-8">
-        {/* Text */}
-        <div className="lg:col-span-2">
-          <ImpactSummarySection
-            title="Designed Good City Transit Campaign"
-            description={`Public transit is a shared space. How we behave shapes the city we live in.
-                    Good City Transit explores everyday manners and small actions that create a more respectful,
-                    shared urban experience.`}
-            highlights={[
-              {
-                icon: "💡",
-                text: "The color palette is inspired by vivid public colors commonly used in shared environments.",
-              },
-              {
-                icon: "🎨",
-                text: "Noise texture introduces a retro and contemporary aesthetic.",
-              },
-            ]}
-          />
-        </div>
+    <ImageLightbox
+      src={lightboxSrc}
+      onClose={() => setLightboxSrc(null)}
+    />
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 px-4 sm:px-8">
 
-        {/* Right Image */}
-        <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full">
-          <Image
-            src="/images/goodcitytransit/compass.png"
-            alt="Pricesnap Mockup"
-            fill
-            className="rounded-2xl object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw"
-          />
-        </div>
+      {/* Image */}
+      <div className="relative order-1 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full">
+        <Image
+          src="/images/goodcitytransit/compass.png"
+          alt="Pricesnap Mockup"
+          fill
+          className="rounded-2xl object-cover cursor-pointer"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 33vw"
+          onClick={() => setLightboxSrc("/images/goodcitytransit/compass.png")}
+        />
       </div>
 
-      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+      {/* Text  */}
+      <div className="order-2 lg:order-1 lg:col-span-2">
+        <ImpactSummarySection
+          title="Designed Good City Transit Campaign"
+          description={`Public transit is a shared space. How we behave shapes the city we live in.
+                        Good City Transit explores everyday manners and small actions that create a more respectful,
+                        shared urban experience.`}
+          highlights={[
+            {
+              icon: "💡",
+              text: "The color palette is inspired by vivid public colors commonly used in shared environments.",
+            },
+            {
+              icon: "🎨",
+              text: "Noise texture introduces a retro and contemporary aesthetic.",
+            },
+          ]}
+        />
+      </div>
+    </div>
+
+      <MotionSection className="px-4 py-16 mt-10 sm:px-8 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             
@@ -69,7 +95,7 @@ export default function PriceSnapContents() {
 
               <div className="relative w-full aspect-[16/9]">
                 <Image
-                  src="/images/goodcitytransit/mindmap.png"
+                  src="/images/goodcitytransit/mindmap_2.png"
                   alt="Overview of Project"
                   fill
                   className="object-contain"
@@ -81,7 +107,7 @@ export default function PriceSnapContents() {
         </div>
       </MotionSection>
 
-      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+      <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             
@@ -97,13 +123,18 @@ export default function PriceSnapContents() {
 
             {/* Right content */}
             <div className="md:col-span-2 space-y-10">
-              <div className="relative w-full aspect-[4/3]">
+              <div
+                  className="relative w-full aspect-[4/3] cursor-zoom-in"
+                  onClick={() =>
+                    setLightboxSrc("/images/goodcitytransit/researchboard.jpg")
+                  }
+                >
                 <Image
-                  src="/images/goodcitytransit/researchboard.jpg"
-                  alt="Overview of Project"
-                  fill
-                  className="object-contain"
-                  priority
+                    src="/images/goodcitytransit/researchboard.jpg"
+                    alt="Research Board"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 />
               </div>
             </div>
@@ -111,7 +142,7 @@ export default function PriceSnapContents() {
         </div>
       </MotionSection>
       
-      <MotionSection className="px-4 py-16 mt-20 sm:px-8 lg:px-20">
+      <MotionSection className="px-4 py-16 sm:px-8 lg:px-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             

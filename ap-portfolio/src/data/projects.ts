@@ -29,7 +29,7 @@ export const projects: Project[] = [
     role: "UI/UX Design",
     description: "Redesign \"Black Bond Books\" website, where is a local, independent bookstore in the Vancouver",
     slug: "BlackBondBook",
-    image: "/images/project2.png",
+    image: "/images/blackbondbook/store_1.webp",
     date: "May 2025",
     skills: ["UX Design", "A/B Test", "Handoff"],
     contentComponent: "BlackBondBookContent",
