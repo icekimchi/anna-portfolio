@@ -33,9 +33,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gray-900">
+                <a href="mailto:annapark0828@gmail.com" className="hover:text-gray-900">
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

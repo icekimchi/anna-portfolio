@@ -25,12 +25,12 @@ export default function Navbar() {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
+            <a
+              href="mailto:annapark0828@gmail.com"
               className="inline-flex items-center gap-2 border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white transition"
             >
               Contact →
-            </Link>
+            </a>
           </div>
 
           {/* Hamburger Button (Mobile) */}
@@ -54,13 +54,13 @@ export default function Navbar() {
               <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
               <li><Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>
               <li>
-                <Link
-                  href="/contact"
+                <a
+                  href="mailto:annapark0828@gmail.com"
                   className="inline-block border px-4 py-2 mt-2 w-fit"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
