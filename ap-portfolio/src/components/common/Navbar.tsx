@@ -19,7 +19,6 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
@@ -51,7 +50,6 @@ export default function Navbar() {
           <div className="md:hidden mt-6 border-t pt-6">
             <ul className="flex flex-col gap-4 text-sm font-medium">
               <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-              <li><Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
               <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
               <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
               <li><Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>

@@ -28,11 +28,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-gray-900">
-                  Projects
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="hover:text-gray-900">
                   About
                 </Link>
@@ -63,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/anna-park-73b26a355/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-900"
