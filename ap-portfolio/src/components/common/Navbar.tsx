@@ -19,19 +19,18 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
+            <a
+              href="mailto:annapark0828@gmail.com"
               className="inline-flex items-center gap-2 border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white transition"
             >
               Contact →
-            </Link>
+            </a>
           </div>
 
           {/* Hamburger Button (Mobile) */}
@@ -51,18 +50,17 @@ export default function Navbar() {
           <div className="md:hidden mt-6 border-t pt-6">
             <ul className="flex flex-col gap-4 text-sm font-medium">
               <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-              <li><Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
               <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
               <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
               <li><Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>
               <li>
-                <Link
-                  href="/contact"
+                <a
+                  href="mailto:annapark0828@gmail.com"
                   className="inline-block border px-4 py-2 mt-2 w-fit"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact →
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
