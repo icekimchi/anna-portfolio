@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/common/Navbar";
+import SiteNav from "@/components/common/SiteNav";
 import BackButton from "@/components/ui/BackButton";
 import ProjectHero from "@/components/ProjectHero";
 import Footer from "@/components/common/Footer";
@@ -9,7 +9,7 @@ import Footer from "@/components/common/Footer";
 export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
@@ -23,7 +23,7 @@ export default async function ProjectPage({
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <SiteNav className="ml-5 mt-6 md:ml-10 md:mt-8" />
       <BackButton />
       <ProjectHero
         title={project.title}

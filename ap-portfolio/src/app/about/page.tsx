@@ -1,7 +1,7 @@
 'use client';
 
 import CustomCursor from "@/components/ui/CustomerCursor";
-import Navbar from "@/components/common/Navbar";
+import SiteNav from "@/components/common/SiteNav";
 import StickySection from "@/components/ui/StickySection";
 import Footer from "@/components/common/Footer";
 import { MotionSection } from "@/components/MotionSection";
@@ -12,7 +12,7 @@ export default function About() {
     <main className="min-h-screen bg-white text-gray-900">
       <CustomCursor/>
 
-      <Navbar />
+      <SiteNav className="ml-5 mt-6 md:ml-10 md:mt-8" />
 
       <MotionSection className="px-6 lg:px-24 pb-28">
         <div className="mx-auto max-w-6xl">
