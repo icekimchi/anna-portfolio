@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import SmoothScroll from '@/components/common/SmoothScroll';
-import Navbar from "@/components/common/Navbar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,10 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} pt-[72px]`}>
+      <body className={inter.className}>
         <SmoothScroll>
           {children}
-          <Navbar />
         </SmoothScroll>
       </body>
     </html>
