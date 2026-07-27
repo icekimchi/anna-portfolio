@@ -34,6 +34,7 @@ export default async function ProjectPage({
         date={project.date}
         tags={project.tags}
         team={project.team}
+        liveUrl={project.liveUrl}
       />
       <Content />
       <Footer />

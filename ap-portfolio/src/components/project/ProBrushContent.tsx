@@ -1,6 +1,5 @@
 "use client";
 
-import ImpactSummarySection from "../ui/ImpactSummarySection";
 import {
   CaseSection,
   SubSection,
@@ -9,58 +8,61 @@ import {
   CaseQuote,
   RelatedProjects,
 } from "@/components/case-study/CaseStudy";
+import ImpactSummarySection from "../ui/ImpactSummarySection";
 
 export default function ProBrushContent() {
   return (
     <>
-      {/* Overview */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 px-4 mb-16 sm:px-8 lg:px-20">
-        <div className="lg:col-span-2">
-          <ImpactSummarySection
-            title="A landing page that turns visitors into quote requests."
-            description="A two-page concept site for a local painting company.
-                        ProBrush is a fictional Vancouver-based residential painting company
-                        I created as a personal project.
-                        I designed and built a two-page Webflow site focused on one goal:
-                        making it effortless for homeowners to trust the company and request a quote."
-            highlights={[
-              {
-                icon: "🏠",
-                text: "Designed two pages with a clear purpose — a landing page that builds trust through service breakdown, an always-reachable quote form.",
-              },
-              {
-                icon: "🖌️",
-                text: "Built a warm, trustworthy visual identity that feels professional.",
-              },
-            ]}
-          />
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 px-4 mb-16 sm:px-8 lg:px-20">
+      <div className="lg:col-span-2">
+        <ImpactSummarySection
+        title="A landing page that turns visitors into quote requests."
+        description="Designed and developed a conversion-focused landing page for a fictional Vancouver painting contractor.
+        The project explores how thoughtful UX, visual hierarchy, and responsive design can help local service businesses generate more qualified leads."
+        highlights={[
+          {
+            icon: "🏠",
+            text: "Designed two pages with a clear purpose — a landing page that builds trust through service breakdown, an always-reachable quote form.",
+          },
+          {
+            icon: "🖌️",
+            text: "Built a warm, trustworthy visual identity that feels professional.",
+          },
+        ]}
+        />
         </div>
-        <div>
-          <CaseImage
-            label="ProBrush — hero mockup image"
-            aspect="aspect-[4/5]"
-          />
+      <div>
+        <CaseImage
+        src="/images/probrush/painting.avif"
+        aspect="aspect-[4/5]"
+        />
         </div>
       </div>
-
+      
       {/* Goals */}
       <CaseSection title="Goals">
         <SubSection title="What the page needed to do">
           <CaseParagraph>
-            ProBrush is a Vancouver-based local painting company that I designed.
-            For a local painting company, the website has exactly one job:
-            convince a homeowner that this crew is reliable, then get them to
-            ask for a quote. The goal was a landing page where trust signals —
-            finished projects, services, process — lead naturally to the
-            contact form.
+            Create a professional landing page that establishes trust,
+            communicates services clearly, and encourages visitors to request a quote.
           </CaseParagraph>
-          <CaseParagraph>
-            The page also had to be easy for the owner to maintain, so the
-            build needed to stay simple and content-editable in Webflow.
-          </CaseParagraph>
-          <CaseImage src="/images/probrush/about-overview.png" alt="About ProBrush" />
         </SubSection>
       </CaseSection>
+
+      {/* Target Audience */}
+      <CaseSection title="Target Audience">
+        <SubSection title="Who the site needed to reach">
+          <CaseParagraph>
+            - Homeowners looking for interior or exterior painting services,
+            <br/>- property managers maintaining rental properties, and small
+            <br/>- businesses requiring commercial painting.
+          </CaseParagraph>
+        </SubSection>
+      </CaseSection>
+
+      <div className="max-w-8xl mx-auto px-4 mt-16 mb-16 sm:px-8 lg:px-20">
+        <CaseImage src="/images/probrush/painting.png" alt="painting preview" />
+      </div>
 
       {/* Process */}
       <CaseSection
@@ -79,15 +81,17 @@ export default function ProBrushContent() {
             transparent process felt far more credible than pages that led
             with slogans.
           </CaseParagraph>
+          <CaseParagraph>
+            These findings shaped the content hierarchy and reinforced the importance of showing real work before asking users to request a quote.
+          </CaseParagraph>
           <CaseImage src="/images/probrush/research.png" alt="research - findings image" />
         </SubSection>
 
         <SubSection id="pb-identity" title="Visual identity">
           <CaseParagraph>
             The identity pairs a deep, dependable base color with warm accents
-            drawn from paint swatches. Rounded corners, soft shadows, and
-            generous photography keep the page approachable — professional,
-            but unmistakably a local business rather than a faceless
+            drawn from paint swatches. The visual system balances professionalism with warmth,
+            helping the brand feel approachable and trustworthy without looking overly corporate.
             franchise.
           </CaseParagraph>
           <CaseImage src="/images/probrush/visual-identity.png" alt="ProBrush visual identity" />
@@ -95,9 +99,6 @@ export default function ProBrushContent() {
 
         <SubSection id="pb-wireframing" title="Wireframing">
           <CaseParagraph>
-            In Figma I wireframed the page as a single persuasive sequence:
-            hero with an immediate call-to-action, services, before-and-after
-            gallery, process steps, testimonials, and finally the quote form.
             Each section answers the question a visitor would naturally ask
             next.
           </CaseParagraph>
@@ -146,42 +147,6 @@ export default function ProBrushContent() {
           
         </SubSection>
       </CaseSection>
-
-      {/* Development process */}
-      <CaseSection
-        title="Development"
-        subnav={[
-          { id: "pb-webflow", label: "Webflow development" },
-          { id: "pb-interactions", label: "Interactions" },
-        ]}
-      >
-        <SubSection id="pb-webflow" title="Webflow development">
-          <CaseParagraph>
-            The page is built in Webflow with a clean class system so the
-            owner can swap photos and edit text without breaking the layout.
-            The gallery and testimonials are structured for easy updates as
-            new projects are completed.
-          </CaseParagraph>
-          <CaseImage label="Webflow build — structure image" />
-        </SubSection>
-
-        <SubSection id="pb-interactions" title="Interactions">
-          <CaseParagraph>
-            Scroll-triggered reveals pace the page section by section, and the
-            before-and-after slider invites visitors to interact with the
-            work itself. Motion is kept subtle — enough to feel modern, never
-            enough to distract from the projects.
-          </CaseParagraph>
-          <CaseImage label="Interactions — animation detail image" />
-        </SubSection>
-      </CaseSection>
-
-      {/* Comment */}
-      <CaseQuote
-        quote="Designing for a trades business sharpened my instincts about hierarchy — every section had to earn its place by moving a visitor one step closer to requesting a quote."
-        name="Anna Park"
-        role="Designer & Developer"
-      />
 
       {/* Related projects */}
       <RelatedProjects currentSlug="Probrush" />

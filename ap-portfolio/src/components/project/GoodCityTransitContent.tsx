@@ -32,7 +32,7 @@ export default function PriceSnapContents() {
       src={lightboxSrc}
       onClose={() => setLightboxSrc(null)}
     />
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 px-4 sm:px-8">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 px-4 sm:px-8 lg:px-20">
 
       {/* Image */}
       <div className="relative order-1 lg:order-2 w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full">

@@ -3,6 +3,7 @@
 :root {
   --background: #FFFFFF;
   --foreground: #222222;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -12,19 +13,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-  }
-}
-
 html.lenis, html.lenis body {
   height: auto;
 }
 
 html {
-  scroll-behavior: auto !important; 
+  scroll-behavior: auto !important;
+  color-scheme: light;
 }
 
 body {

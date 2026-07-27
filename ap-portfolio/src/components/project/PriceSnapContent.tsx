@@ -8,7 +8,7 @@ export default function PriceSnapContents(){
     return(
     <>
     {/* Overview */}
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 px-4 mb-16 sm:px-8 lg:px-20">
       <div className="lg:col-span-2">
         <ImpactSummarySection
           title="Improved Information Fragmentation in Vancouver’s Grocery Market."

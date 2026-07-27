@@ -7,6 +7,7 @@ interface ProjectHeroProps {
   date?: string;
   team?: string;
   tags?: string[];
+  liveUrl?: string;
 }
 
 export default function ProjectHero({
@@ -18,6 +19,7 @@ export default function ProjectHero({
   date,
   team,
   tags = [],
+  liveUrl,
 }: ProjectHeroProps) {
   return (
     <>
@@ -48,9 +50,28 @@ export default function ProjectHero({
         )}
 
         {/* Title */}
-        <h1 className="text-gray-900 font-semibold leading-tight text-[48px]">
-          {title}
-        </h1>
+        <div className="flex flex-wrap items-center justify-between gap-6">
+          <h1 className="text-gray-900 font-semibold leading-tight text-[48px]">
+            {title}
+          </h1>
+
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-white shadow-md transition hover:-translate-y-0.5 hover:bg-neutral-700 hover:shadow-lg"
+            >
+              Visit live site
+              <span
+                aria-hidden
+                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              >
+                ↗
+              </span>
+            </a>
+          )}
+        </div>
 
         {/* Description */}
         <p className="mt-6 text-lg text-gray-600">

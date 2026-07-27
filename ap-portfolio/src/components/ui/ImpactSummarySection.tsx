@@ -19,23 +19,23 @@ export default function ImpactSummarySection({
 }: ImpactSummaryProps) {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto gap-16">
+      <div className="max-w-7xl mx-auto">
         {/* Left content */}
         <div>
-          <p className="text-xl uppercase tracking-wide text-gray-400 mb-4">
+          <p className="text-base sm:text-lg md:text-xl uppercase tracking-wide text-gray-400 mb-3 sm:mb-4">
             Long story short
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-medium text-gray-600">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-600">
             {title}
           </h2>
 
-          <p className="mt-6 text-gray-600">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-600">
             {description}
           </p>
 
           {/* Highlights */}
-          <div className="mt-12 space-y-4">
+          <div className="mt-8 sm:mt-12 space-y-3 sm:space-y-4">
             {highlights.map((item, index) => (
               <HighlightCard
                 key={index}

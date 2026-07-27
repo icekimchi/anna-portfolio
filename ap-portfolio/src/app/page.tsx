@@ -12,123 +12,23 @@ const roboto = Roboto({
 
 const MAILTO = "mailto:annapark0828@gmail.com?subject=Hello%20Anna";
 
-/* ---------- Background: bright pastel 3D-glass scene ---------- */
-
-function GlassOrb({
-  tint,
-  className,
-  delay = 0,
-  duration = 7,
-}: {
-  tint: string;
-  className: string;
-  delay?: number;
-  duration?: number;
-}) {
-  return (
-    <motion.div
-      aria-hidden
-      animate={{ y: [0, -18, 0] }}
-      transition={{ duration, delay, repeat: Infinity, ease: "easeInOut" }}
-      className={`absolute ${className}`}
-    >
-      <div
-        className="h-full w-full rounded-full"
-        style={{
-          background: `radial-gradient(circle at 30% 24%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 6%, ${tint}66 30%, ${tint} 68%, ${tint}f2 100%)`,
-          boxShadow:
-            "inset -16px -20px 30px rgba(255,255,255,0.6), inset 12px 16px 20px rgba(255,255,255,0.35), inset 0 0 0 1px rgba(255,255,255,0.4), 0 30px 40px -10px rgba(70,100,150,0.35)",
-        }}
-      />
-      {/* tight specular highlight */}
-      <div
-        className="absolute left-[20%] top-[16%] h-[22%] w-[22%] rounded-full bg-white"
-        style={{ filter: "blur(2px)", opacity: 0.95 }}
-      />
-      {/* contact shadow grounding the object */}
-      <div
-        className="absolute left-1/2 top-full h-[18%] w-[70%] -translate-x-1/2 rounded-full bg-[#5b7ba8]"
-        style={{ filter: "blur(10px)", opacity: 0.25, marginTop: "-4%" }}
-      />
-    </motion.div>
-  );
-}
-
-function GlassRing({ className, delay = 0 }: { className: string; delay?: number }) {
-  return (
-    <motion.div
-      aria-hidden
-      animate={{ y: [0, -22, 0], rotate: [0, 8, 0] }}
-      transition={{ duration: 9, delay, repeat: Infinity, ease: "easeInOut" }}
-      className={`absolute ${className}`}
-    >
-      <div
-        className="h-full w-full rounded-full"
-        style={{
-          background:
-            "conic-gradient(from 210deg, rgba(255,255,255,1) 0deg, rgba(210,228,250,0.85) 60deg, rgba(148,184,234,0.95) 160deg, rgba(210,228,250,0.85) 260deg, rgba(255,255,255,1) 360deg)",
-          WebkitMask: "radial-gradient(circle, transparent 50%, black 54%)",
-          mask: "radial-gradient(circle, transparent 50%, black 54%)",
-          boxShadow: "0 24px 36px -8px rgba(70,100,150,0.3)",
-        }}
-      />
-      <div
-        className="absolute left-1/2 top-full h-[16%] w-[80%] -translate-x-1/2 rounded-full bg-[#5b7ba8]"
-        style={{ filter: "blur(10px)", opacity: 0.2, marginTop: "-6%" }}
-      />
-    </motion.div>
-  );
-}
-
-function GlassHex({
-  tint,
-  className,
-  delay = 0,
-}: {
-  tint: string;
-  className: string;
-  delay?: number;
-}) {
-  return (
-    <motion.div
-      aria-hidden
-      animate={{ y: [0, -16, 0], rotate: [0, -6, 0] }}
-      transition={{ duration: 8, delay, repeat: Infinity, ease: "easeInOut" }}
-      className={`absolute ${className}`}
-      style={{
-        clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-        background: `radial-gradient(circle at 32% 24%, rgba(255,255,255,0.95) 0%, ${tint}55 35%, ${tint} 75%)`,
-        boxShadow:
-          "inset -10px -12px 20px rgba(255,255,255,0.5), inset 8px 10px 16px rgba(255,255,255,0.25)",
-      }}
-    />
-  );
-}
+/* ---------- Background: looping ambient video ---------- */
 
 function Background() {
   return (
-    <div
-      aria-hidden
-      className="absolute inset-0 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(120% 90% at 50% 0%, #b7d5f6 0%, #a3c3ee 30%, #bcd6f4 62%, #dcebfa 100%)",
-      }}
-    >
-      {/* soft color washes, kept subtle so objects stay crisp */}
-      <div className="absolute left-1/2 top-[20%] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#e6d7f6] opacity-35 blur-[100px]" />
-      <div className="absolute left-1/2 bottom-[10%] h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[#f6dccf] opacity-30 blur-[110px]" />
-
-      {/* floating glass / ceramic objects, clustered center */}
-      <GlassRing className="left-[44%] top-[16%] h-32 w-32 md:left-[45%] md:top-[14%] md:h-48 md:w-48" delay={0.2} />
-      <GlassOrb tint="#c9b4ef" className="left-[36%] top-[38%] h-24 w-24 md:h-36 md:w-36" delay={0.5} duration={8} />
-      <GlassHex tint="#a9cdf4" className="right-[36%] top-[30%] h-20 w-20 md:h-28 md:w-28" delay={1} />
-      <GlassOrb tint="#f2c4ae" className="left-[52%] top-[46%] hidden h-16 w-16 md:block" delay={1.4} duration={6.5} />
-      <GlassOrb tint="#b8e4cd" className="right-[38%] bottom-[24%] h-16 w-16 md:h-28 md:w-28" delay={0.8} duration={9} />
-      <GlassOrb tint="#f4d9b8" className="left-[47%] bottom-[16%] hidden h-14 w-14 md:block" delay={2} duration={7} />
-
-      {/* floor glow to ground the whole cluster */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/40 to-transparent" />
+    <div aria-hidden className="absolute inset-0 overflow-hidden bg-black">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="h-full w-full object-cover"
+      >
+        <source src="/videos/download.mp4" type="video/mp4" />
+      </video>
+      {/* dark wash so white text/UI stays legible over the footage */}
+      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
     </div>
   );
 }

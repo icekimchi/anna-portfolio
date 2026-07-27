@@ -9,6 +9,7 @@ export interface Project {
   tags: string[];
   team: string;
   contentComponent: string;
+  liveUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -22,7 +23,8 @@ export const projects: Project[] = [
     skills: ["Webflow", "Figma"],
     contentComponent: "KryoContent",
     team: "Personal",
-    tags: ["LANDING PAGE", "WEBFLOW", "2026"]
+    tags: ["CMS", "E-commerce", "ScalableDesign"],
+    liveUrl: "https://kryo-18fa5d.webflow.io/"
   },
   {
     title: "Painting Company Landing Page",
@@ -34,38 +36,28 @@ export const projects: Project[] = [
     skills: ["Webflow", "Figma"],
     contentComponent: "ProBrushContent",
     team: "Personal",
-    tags: ["LANDING PAGE", "WEBFLOW", "2025"]
+    tags: ["LandingPage", "ConversionFocused", "ResponsiveDesign"],
+    liveUrl: "https://probrush.webflow.io/"
   },
   {
     title: "The Valthakan Times",
-    role: "Web Development",
-    description: "Redesign client's Personal Newsletter page",
+    role: "Lead Developer & UI/UX Designer",
+    description: "Redesigned and hand-coded a client's newsletter site, migrating it off Beehiiv's templates onto a custom Next.js build powered by the Beehiiv API",
     slug: "The-Valthakan-Times",
     image: "/images/thevalthakantimes.png",
-    date: "Oct ~ Nov 2025",
-    skills: ["Next.js", "React", "Tailwind CSS"],
+    date: "3-week sprint · 2025",
+    skills: ["Next.js", "React", "Tailwind CSS", "Beehiiv API"],
     contentComponent: "TheValthakanTimesContent",
-    team: "5 UI/UX Designer",
-    tags: ["FULL PROCESS", "CLIENT PROJECT", "2025"]
-  },
-  {
-    title: "The Black Bond Book",
-    role: "Website Redesign",
-    description: "Vancouver local bookstore website redesign",
-    slug: "The-Black-Bond-Book",
-    image: "/images/project2.png",
-    date: "Oct ~ Nov 2025",
-    skills: ["Figma", "design systems"],
-    contentComponent: "BlackBondBookContent",
-    team: "Personal",
-    tags: ["REDESIGN", "FIGMA", "2025"]
+    team: "3 UI/UX Designers + 1 Developer (me)",
+    tags: ["FULL PROCESS", "CLIENT PROJECT", "2025"],
+    liveUrl: "https://the-valthakan-times.vercel.app/"
   },
   {
     title: "DayFlow - AI Schedule Management App",
     role: "UI/UX Design",
     description: "A productivity app that helps users manage their schedules and tasks more efficiently using AI.",
     slug: "DayFlow",
-    image: "/images/thevalthakantimes.png",
+    image: "/images/decode/decode-onboarding.png",
     date: "Oct ~ Nov 2025",
     skills: ["Figma"],
     contentComponent: "DayFlowContent",
