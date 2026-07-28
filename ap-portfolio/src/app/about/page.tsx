@@ -7,6 +7,72 @@ import Footer from "@/components/common/Footer";
 import { MotionSection } from "@/components/MotionSection";
 import Image from "next/image";
 
+const galleryImages = [
+  {
+    src: "/images/anna/anna.JPG",
+    alt: "Anna setting up a camera for a product shoot",
+    width: 3024,
+    height: 4032,
+    rotate: "-rotate-2",
+  },
+  {
+    src: "/images/anna/anna-final.jpeg",
+    alt: "Anna presenting The Valthakan Times handoff slide",
+    width: 4032,
+    height: 2268,
+    rotate: "rotate-1",
+  },
+  {
+    src: "/images/anna/anna-presentation.PNG",
+    alt: "Anna presenting The Valthakan Times case study",
+    width: 1170,
+    height: 877,
+    rotate: "-rotate-1",
+  },
+  {
+    src: "/images/anna/volunteer1.JPG",
+    alt: "Volunteer badge from Vancouver Startup Week",
+    width: 1170,
+    height: 2080,
+    rotate: "rotate-2",
+  },
+  {
+    src: "/images/anna/volunteer2.JPG",
+    alt: "Anna wearing a handwritten name tag while volunteering",
+    width: 1170,
+    height: 2080,
+    rotate: "-rotate-2",
+  },
+  {
+    src: "/images/anna/volunteer5.jpeg",
+    alt: "Anna holding a venue map while volunteering",
+    width: 4032,
+    height: 3024,
+    rotate: "rotate-1",
+  },
+  {
+    src: "/images/anna/volunteer6.jpeg",
+    alt: "Vancouver Startup Week volunteer team",
+    width: 4032,
+    height: 3024,
+    rotate: "-rotate-1",
+  },
+  {
+    src: "/images/anna/volunteer3.jpg",
+    alt: "Large group photo at a Product BC community event",
+    width: 1170,
+    height: 671,
+    rotate: "rotate-2",
+  },
+  {
+    src: "/images/anna/volunteer4.jpeg",
+    alt: "Anna giving a peace sign at a community event",
+    width: 4032,
+    height: 3024,
+    rotate: "-rotate-2",
+  },
+];
+
 export default function About() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -25,7 +91,7 @@ export default function About() {
             <div className="lg:sticky lg:top-28">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-neutral-100">
                 <Image
-                  src="/images/Anna-about.png"
+                  src="/images/anna/Anna-about.png"
                   alt="Anna Park"
                   fill
                   className="object-cover"
@@ -112,6 +178,32 @@ export default function About() {
       </MotionSection>
 
       <StickySection/>
+
+      {/* Gallery */}
+      <section className="px-6 pb-20 lg:px-24 lg:pb-28">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-8 text-xs uppercase tracking-[0.2em] text-neutral-400">
+            Behind the scenes
+          </h2>
+          <div className="columns-2 gap-4 sm:columns-3 sm:gap-6">
+            {galleryImages.map((img) => (
+              <div
+                key={img.src}
+                className={`mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-neutral-100 shadow-md transition-transform duration-300 hover:scale-[1.02] hover:rotate-0 sm:mb-6 ${img.rotate}`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  sizes="(min-width: 640px) 33vw, 50vw"
+                  className="h-auto w-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

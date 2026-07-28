@@ -110,7 +110,7 @@ export default function Home() {
             <NavCard
               href="/about"
               label="About me"
-              img="/images/profile.png"
+              img="/images/anna/profile.png"
               alt="Portrait of Anna Park"
             />
             <NavCard
