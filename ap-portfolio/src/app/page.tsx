@@ -48,7 +48,7 @@ function NavCard({
 }) {
   return (
     <Link href={href} className="group block">
-      <div className="flex items-stretch justify-between gap-4 rounded-lg bg-white/60 p-3 shadow-[0_12px_32px_rgba(90,120,170,0.18)] backdrop-blur-md transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-white/80 group-hover:shadow-[0_18px_44px_rgba(90,120,170,0.28)]">
+      <div className="flex items-stretch justify-between gap-3 rounded-lg bg-white/60 p-2.5 shadow-[0_12px_32px_rgba(90,120,170,0.18)] backdrop-blur-md transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-white/80 group-hover:shadow-[0_18px_44px_rgba(90,120,170,0.28)] md:gap-4 md:p-3">
         <div className="flex flex-col justify-between">
           <span className="inline-flex w-fit items-center rounded-full bg-white px-4 py-1.5 text-sm font-medium text-neutral-900 shadow-sm">
             {label}
@@ -60,7 +60,7 @@ function NavCard({
             →
           </span>
         </div>
-        <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg bg-neutral-100 md:h-28 md:w-36">
+        <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-neutral-100 md:h-28 md:w-36">
           <Image
             src={img}
             alt={alt}
@@ -79,13 +79,13 @@ function NavCard({
 export default function Home() {
   return (
     <main
-      className={`${roboto.className} relative flex min-h-[100svh] flex-col overflow-hidden`}
+      className={`${roboto.className} relative flex h-[100svh] flex-col overflow-hidden`}
     >
       <Background />
 
-      <div className="relative z-10 flex flex-1 flex-col gap-6 px-5 pb-5 pt-6 md:gap-8 md:px-8 md:pt-8">
+      <div className="relative z-10 flex flex-1 flex-col gap-3 px-5 pb-3 pt-4 md:gap-8 md:px-8 md:pb-5 md:pt-8">
         {/* Top row: email (left) + cards (right) */}
-        <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-5">
           <div className="flex items-center gap-4">
             <Link
               href="/"
@@ -105,7 +105,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="flex w-full flex-col gap-4 md:w-[400px]"
+            className="flex w-full flex-col gap-2 md:w-[400px] md:gap-4"
           >
             <NavCard
               href="/about"
@@ -129,20 +129,20 @@ export default function Home() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="flex max-w-2xl flex-1 flex-col justify-end md:absolute md:left-8 md:top-[20%] md:flex-none md:justify-start"
         >
-          <h1 className="text-4xl font-medium leading-[1.15] text-white [text-shadow:0_2px_28px_rgba(70,100,150,0.35)] md:text-6xl">
+          <h1 className="text-3xl font-medium leading-[1.15] text-white [text-shadow:0_2px_28px_rgba(70,100,150,0.35)] md:text-6xl">
             Hi, I&apos;m Anna.
             <br />
             I design and build websites.
           </h1>
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-white/90 md:text-base">
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 md:mt-5 md:text-base">
             Product designer &amp; front-end developer based in Vancouver,
             crafting bright, thoughtful digital experiences.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap gap-3 md:mt-8">
             <a
               href={MAILTO}
-              className="rounded-lg bg-white px-6 py-3 text-sm font-medium uppercase tracking-wide text-neutral-900 shadow-[0_10px_28px_rgba(90,120,170,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(90,120,170,0.4)]"
+              className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-neutral-900 shadow-[0_10px_28px_rgba(90,120,170,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(90,120,170,0.4)] md:px-6 md:py-3"
             >
               Let&apos;s talk →
             </a>
@@ -150,7 +150,7 @@ export default function Home() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-white/70 px-6 py-3 text-sm font-medium uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-white/15"
+              className="rounded-lg border border-white/70 px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-white/15 md:px-6 md:py-3"
             >
               View resume
             </a>
@@ -158,7 +158,7 @@ export default function Home() {
         </motion.div>
 
         {/* Bottom bar */}
-        <div className="flex items-center justify-between gap-4 rounded-lg bg-white/65 px-5 py-3 text-xs text-neutral-800 backdrop-blur-md md:mt-auto md:text-sm">
+        <div className="flex items-center justify-between gap-4 rounded-lg bg-white/65 px-4 py-2.5 text-xs text-neutral-800 backdrop-blur-md md:mt-auto md:px-5 md:py-3 md:text-sm">
           <span className="uppercase tracking-wide">
             Thank you for visiting my portfolio
           </span>
