@@ -22,8 +22,10 @@ export default async function ProjectPage({
   );
 
   return (
-    <div className="min-h-screen">
-      <SiteNav className="ml-5 mt-6 md:ml-10 md:mt-8" />
+    <div className="relative min-h-screen">
+      <div className="absolute inset-x-0 top-0 z-50">
+        <SiteNav className="ml-5 mt-6 md:ml-10 md:mt-8" />
+      </div>
       <BackButton />
       <ProjectHero
         title={project.title}
