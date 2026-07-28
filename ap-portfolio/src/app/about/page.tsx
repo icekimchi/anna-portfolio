@@ -116,14 +116,8 @@ export default function About() {
                   Background
                 </h2>
                 <p className="text-lg leading-relaxed text-neutral-700">
-                  I started in Information Systems in South Korea, studying 5G
-                  networks, telecommunications, and software. During a software
-                  engineering internship at ETRI — South Korea&apos;s leading
-                  government-funded ICT research institute — I worked on an
-                  existing app, finding its problems and reworking everything
-                  from the design to the algorithms. That process is where I
-                  fell for UI/UX: I realized I cared about the user&apos;s entire
-                  digital experience, not just the code underneath it.
+                  I started by studying Information Systems in South Korea,
+                  where I learned software engineering and telecommunications. During my software engineering internship at ETRI (Electronics and Telecommunications Research Institute), I worked on improving an existing application by identifying usability issues and redesigning both the user experience and the underlying logic. That experience made me realize I was most interested in the connection between design and engineering.
                 </p>
               </section>
 
@@ -132,17 +126,16 @@ export default function About() {
                   Now
                 </h2>
                 <p className="text-lg leading-relaxed text-neutral-700">
-                  So I came to Canada and studied UI/UX at Cornerstone College,
-                  turning that instinct into a craft. I&apos;m currently a
-                  Product &amp; Service Designer at CareerMind in Vancouver,
-                  where I lead end-to-end design for information-architecture
-                  projects and turn complex technical concepts into accessible
-                  learning materials for non-technical students.
+                  After moving to Canada, I studied UI/UX Design at Cornerstone International Community College of Canada.
+                  Since then, I've been combining my design education with my software background through projects involving
+                  Webflow development and full-stack applications built with Next.js.
                 </p>
                 <p className="mt-5 text-lg leading-relaxed text-neutral-700">
-                  Today I sit comfortably between design and engineering — I
-                  design an experience, then I build it myself, which means it
-                  survives the journey from Figma to production intact.
+                  Today, I enjoy working across both design and development.
+                  I like understanding how products work from end to end—from
+                  identifying user problems and designing interfaces to building
+                  the final experience.
+                  I believe good products come from thoughtful design supported by solid engineering.
                 </p>
               </section>
 
