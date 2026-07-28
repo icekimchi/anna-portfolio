@@ -37,7 +37,7 @@ export default function DayFlowContent() {
         </div>
         <div>
           <CaseImage
-            label="DayFlow — app mockup image"
+            src="/images/decode/overview.png"
             aspect="aspect-[4/5]"
           />
         </div>
@@ -99,7 +99,7 @@ export default function DayFlowContent() {
             manual fallback so the app is still fully usable with the AI
             turned off.
           </CaseParagraph>
-          <CaseImage src="/images/decode/decode-userflow.png" alt="User flows — flow diagram image" />
+          <CaseImage src="/images/decode/userflow.jpg" alt="User flows — flow diagram image" />
         </SubSection>
 
         <SubSection id="df-system" title="Design system">
@@ -155,13 +155,6 @@ export default function DayFlowContent() {
           <CaseImage src="/images/decode/decode-onboarding.png" alt="flow mockup image" />
         </SubSection>
       </CaseSection>
-
-      {/* Comment */}
-      <CaseQuote
-        quote="The best compliment DayFlow got in testing was that the AI felt like a considerate assistant — it suggested, explained, and stepped back."
-        name="Anna Park"
-        role="UI/UX Designer"
-      />
 
       {/* Related projects */}
       <RelatedProjects currentSlug="DayFlow" />
