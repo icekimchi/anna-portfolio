@@ -21,10 +21,9 @@ export default function TheValthakanTimesContent() {
             description="Daniel Alexander runs The Valthakan Times, a fantasy-themed newsletter
                         with over 1.7M+ monthly social media reach. The site was previously built
                         on Beehiiv, which meant the design was boxed in by the platform's templates.
-                        I led a team of three UI/UX designers through the redesign, then
-                        hand-coded the entire result in Next.js and Tailwind CSS — connecting
-                        Beehiiv's API so every past newsletter edition and paid collection carried
-                        over automatically. The whole project ran in three weeks."
+                        Instead of relying on Beehiiv's hosted website,
+                        I developed an independent Next.js application that consumes the Beehiiv API,
+                        allowing the client to keep publishing newsletters through Beehiiv while owning a fully customizable website."
             highlights={[
               {
                 icon: "🧵",
@@ -38,52 +37,60 @@ export default function TheValthakanTimesContent() {
           />
         </div>
         <div>
-          <CaseImage label="The Valthakan Times — hero mockup image" aspect="aspect-[4/5]" />
+          <CaseImage src="/images/thevalthakantimes/team-photo.jpeg" aspect="aspect-[4/5]" />
         </div>
       </div>
-
-      {/* Goals */}
-      <CaseSection title="Goals">
-        <SubSection title="What the redesign needed to do">
+            
+      <CaseSection
+        title="Process"
+        subnav={[
+          { id: "tvt-problem", label: "Problem" },
+          { id: "tvt-goal", label: "Project Goal" },
+          { id: "tvt-resesarch", label: "Client Research" },
+          { id: "tvt-solution", label: "Solution" },
+        ]}
+      >
+        <CaseImage src="/images/thevalthakantimes/about-client.png" />
+        <SubSection id="tvt-problem" title="Problem">
           <CaseParagraph>
-            Daniel had outgrown what Beehiiv&apos;s built-in themes could offer.
-            The goal was a site that felt like his own brand rather than a
-            newsletter template — while still functioning as a newsletter
-            platform underneath: browsing past editions, reading the paid
-            content, and converting readers into Patreon and newsletter
-            subscribers.
-          </CaseParagraph>
-          <CaseParagraph>
+            The client&apos;s existing website was tightly coupled to Beehiiv&apos;s built-in website.
+            <br/>
             Because the entire archive already lived in Beehiiv, nothing
-            could be manually re-uploaded. Every past edition needed to
+            could be manually re-uploaded. <br/>Every past edition needed to
             surface automatically in the new site through Beehiiv&apos;s
             API.
           </CaseParagraph>
-          <CaseImage label="Goals — original Beehiiv site vs. goals image" />
+          <CaseImage src="/images/thevalthakantimes/previous.png" />
         </SubSection>
-      </CaseSection>
-
-      {/* The challenge */}
-      <CaseSection title="The Challenge">
-        <SubSection title="Three weeks, three designers, one developer">
+        <SubSection id="tvt-goal" title="Project Goal">
           <CaseParagraph>
-            The timeline was tight — three weeks from kickoff to launch-ready
-            build — for a project that involved both a full redesign and a
-            full custom build. With three UI/UX designers working in
-            parallel and me as the only person turning designs into code, the
-            biggest risk was designs arriving faster than they could be
-            built.
+             - Redesign the client&apos;s personal website
+             <br/>- Preserve the existing newsletter workflow
+             <br/>- Build a fully custom front-end
+             <br/>- Maintain seamless integration with Beehiiv
+             <br/>- Deliver the project through an iterative client feedback process
           </CaseParagraph>
+        </SubSection>
+        <SubSection id="tvt-resesarch" title="Client Research">
           <CaseParagraph>
-            On the technical side, the previous site&apos;s low click-through
-            rate (5.86%) on newsletter editions meant the new information
-            architecture and browsing experience had real conversion pressure
-            behind it — this wasn&apos;t just a visual refresh.
+            Through three client meetings, we identified the client&apos;s primary goals:
+            <br/>- Increase newsletter subscriptions
+            <br/>- Better showcase articles
+            <br/>- Improve visual branding
+            <br/>- Reduce dependence on Beehiiv&apos;s default website
           </CaseParagraph>
-          <CaseImage
-            src="/images/thevalthakantimes/competitors.png"
-            alt="Competitor and reference site research"
-          />
+          <CaseImage src="/images/thevalthakantimes/client-meeting.png" />
+        </SubSection>
+        <SubSection id="tvt-solution" title="Solution">
+          <CaseParagraph>
+            The solution was a fully custom Next.js application that consumes the Beehiiv API.
+            <br/>This allowed the client to keep publishing newsletters through Beehiiv while owning a fully customizable website.
+          </CaseParagraph>
+          <CaseImage src="/images/thevalthakantimes/tech-stack.png" />
+          <CaseImage src="/images/thevalthakantimes/problem1.png" />
+          <CaseImage src="/images/thevalthakantimes/problem2.png" />
+          <CaseImage src="/images/thevalthakantimes/problem3.png" />
+          <CaseImage src="/images/thevalthakantimes/problem4.png" />
         </SubSection>
       </CaseSection>
 
@@ -92,7 +99,6 @@ export default function TheValthakanTimesContent() {
         title="Process"
         subnav={[
           { id: "tvt-ia", label: "Information architecture" },
-          { id: "tvt-api", label: "Beehiiv API integration" },
           { id: "tvt-system", label: "Design system" },
         ]}
       >
@@ -110,27 +116,8 @@ export default function TheValthakanTimesContent() {
           />
         </SubSection>
 
-        <SubSection id="tvt-api" title="Beehiiv API integration">
-          <CaseParagraph>
-            Instead of a CMS, the site pulls directly from Beehiiv&apos;s API:
-            every edition, tag, and paid-content flag Daniel already had in
-            Beehiiv appears on the new site without any manual re-entry. This
-            was the piece that made a full platform switch possible inside a
-            three-week timeline — no content migration, just a new front end
-            reading live data.
-          </CaseParagraph>
-          <CaseImage label="Beehiiv API — data flow / integration diagram image" />
-        </SubSection>
-
         <SubSection id="tvt-system" title="Design system">
-          <CaseParagraph>
-            With three designers working across different pages at once, we
-            locked a shared system early: a Deep Blue and Royal Purple color
-            pair, Italianno for display type, and Eczar for headlines — a
-            &ldquo;fantasy-modern&rdquo; look that stayed friendly, humorous,
-            and blunt, matching Daniel&apos;s own voice.
-          </CaseParagraph>
-          <CaseImage label="Design system — color & typography image" />
+          <CaseImage src="/images/thevalthakantimes/styleguide.png" />
         </SubSection>
       </CaseSection>
 
@@ -157,16 +144,6 @@ export default function TheValthakanTimesContent() {
           />
         </SubSection>
 
-        <SubSection id="tvt-filtering" title="Edition filtering">
-          <CaseParagraph>
-            To fix the low click-through rate on editions, I built a dynamic
-            filtering system in TypeScript on top of the Beehiiv data, so
-            readers can browse free and paid editions by topic instead of
-            scrolling a flat list.
-          </CaseParagraph>
-          <CaseImage label="Edition filtering — UI image" />
-        </SubSection>
-
         <SubSection id="tvt-responsive" title="Responsive">
           <CaseParagraph>
             Every screen was built and tested at mobile scale first, since
@@ -174,40 +151,11 @@ export default function TheValthakanTimesContent() {
             arrives from a shared social link.
           </CaseParagraph>
           <CaseImage
-            src="/images/thevalthakantimes/home_mob.gif"
+            src="/images/thevalthakantimes/mobile.png"
             alt="Mobile home page interaction"
           />
-        </SubSection>
-      </CaseSection>
-
-      {/* Development */}
-      <CaseSection
-        title="Development"
-        subnav={[
-          { id: "tvt-stack", label: "Hand-coded build" },
-          { id: "tvt-desktop", label: "Desktop experience" },
-        ]}
-      >
-        <SubSection id="tvt-stack" title="Hand-coded build">
-          <CaseParagraph>
-            Unlike a page builder, the entire site is custom code — Next.js
-            App Router and Tailwind CSS — which is what made the adaptive
-            navigation, custom filtering, and Beehiiv API integration
-            possible in the first place. I was the only developer on the
-            project, responsible for turning all three designers&apos;
-            screens into a single coherent, working site.
-          </CaseParagraph>
-          <CaseImage label="Hand-coded build — code / component structure image" />
-        </SubSection>
-
-        <SubSection id="tvt-desktop" title="Desktop experience">
-          <CaseParagraph>
-            The desktop layout carries the same content, filtering, and
-            Beehiiv-backed archive as mobile, restructured around a wider
-            canvas with more of the archive visible at once.
-          </CaseParagraph>
           <CaseImage
-            src="/images/thevalthakantimes/home_desktop.gif"
+            src="/images/thevalthakantimes/desktop.png"
             alt="Desktop home page interaction"
           />
         </SubSection>
