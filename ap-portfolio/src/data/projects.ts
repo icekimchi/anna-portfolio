@@ -13,34 +13,8 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: "Sunglasses company landing page",
-    role: "Webflow Development",
-    description: "Modern Sunglasses company landing page design and development",
-    slug: "KRYO",
-    image: "/images/kryo/mainpage-ipad-mockup.png",
-    date: "Oct ~ Nov 2026",
-    skills: ["CMS", "E-Commerce", "ScalableDesign"],
-    contentComponent: "KryoContent",
-    team: "Personal",
-    tags: ["CMS", "E-commerce", "ScalableDesign"],
-    liveUrl: "https://kryo-18fa5d.webflow.io/"
-  },
-  {
-    title: "Painting Company Landing Page",
-    role: "Webflow Development",
-    description: "Vancouver based painting company landing page design and development",
-    slug: "Probrush",
-    image: "/images/probrush/mockup-mainpage.png",
-    date: "Oct ~ Nov 2025",
-    skills: ["LandingPage", "Webflow", "ConversionFocused"],
-    contentComponent: "ProBrushContent",
-    team: "Personal",
-    tags: ["LandingPage", "ConversionFocused", "ResponsiveDesign"],
-    liveUrl: "https://probrush.webflow.io/"
-  },
-  {
-    title: "The Valthakan Times",
+   {
+    title: "The Valthakan Times - Full Stack Development",
     role: "Lead Developer & UI/UX Designer",
     description: "Redesigned and hand-coded a client's newsletter site, migrating it off Beehiiv's templates onto a custom Next.js build powered by the Beehiiv API",
     slug: "The-Valthakan-Times",
@@ -53,20 +27,46 @@ export const projects: Project[] = [
     liveUrl: "https://the-valthakan-times.vercel.app/"
   },
   {
+    title: "KRYO - Luxury Sunglasses",
+    role: "Webflow Developer",
+    description: "Modern Sunglasses company landing page design and development",
+    slug: "KRYO",
+    image: "/images/kryo/mainpage-ipad-mockup.png",
+    date: "Oct ~ Nov 2026",
+    skills: ["CMS", "E-Commerce", "ScalableDesign"],
+    contentComponent: "KryoContent",
+    team: "Personal",
+    tags: ["CMS", "E-commerce", "ScalableDesign"],
+    liveUrl: "https://kryo-anna.webflow.io/"
+  },
+  {
     title: "DayFlow - AI Schedule Management App",
-    role: "UI/UX Design",
+    role: "UI/UX Designer",
     description: "A productivity app that helps users manage their schedules and tasks more efficiently using AI.",
     slug: "DayFlow",
     image: "/images/decode/decode-onboarding.png",
     date: "Oct ~ Nov 2025",
-    skills: ["App Design", "Prototyping", "Figma"],
+    skills: ["React Native", "TypeScript", "Figma"],
     contentComponent: "DayFlowContent",
-    team: "5 UI/UX Designer",
-    tags: ["FULL PROCESS", "CLIENT PROJECT", "2025"]
+    team: "2 UI/UX Designers + 2 Developers",
+    tags: ["FULL PROCESS", "2025"]
+  },
+  {
+    title: "Probrush - Painting Company based in Vancouver",
+    role: "Webflow Developer",
+    description: "Vancouver based painting company landing page design and development",
+    slug: "Probrush",
+    image: "/images/probrush/mockup-mainpage.png",
+    date: "Oct ~ Nov 2025",
+    skills: ["LandingPage", "Webflow", "ConversionFocused"],
+    contentComponent: "ProBrushContent",
+    team: "Personal",
+    tags: ["LandingPage", "ConversionFocused", "ResponsiveDesign"],
+    liveUrl: "https://probrush.webflow.io/"
   },
   {
     title: "PriceSnap",
-    role: "UI/UX Design",
+    role: "UI/UX Designer",
     description: "Integrated app that allows users to conveniently compare prices across multiple drugstores in Vancouver.",
     slug: "pricesnap",
     image: "/images/pricesnap/thumbnail.png",
@@ -78,12 +78,12 @@ export const projects: Project[] = [
   },
   {
     title: "Good City Transit Campaign",
-    role: "Visual Branding",
-    description: "Redesign client's Personal Newsletter page",
+    role: "Product  Designer",
+    description: "Good City Transit explores everyday manners and small actions that create a more respectful, shared urban experience.",
     slug: "Good-City-Transit-Campaign",
     image: "/images/goodcitytransit.png",
     date: "Jan 2026",
-    skills: ["Visual Branding", "Visual Identity"],
+    skills: ["Figma","Visual Branding", "Visual Identity"],
     contentComponent: "GoodCityTransitContent",
     team: "Personal",
     tags: ["VISUAL IDENTITY", "BRAND DESIGN", "2026"]
