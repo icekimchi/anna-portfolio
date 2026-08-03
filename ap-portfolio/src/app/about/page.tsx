@@ -9,67 +9,81 @@ import Image from "next/image";
 
 const galleryImages = [
   {
-    src: "/images/anna/anna.JPG",
-    alt: "Anna setting up a camera for a product shoot",
-    width: 3024,
-    height: 4032,
+    src: "/images/anna/1.jpeg",
+    alt: "Anna standing along a mountain road on the Icefields Parkway",
+    width: 4032,
+    height: 3024,
     rotate: "-rotate-2",
   },
   {
-    src: "/images/anna/anna-final.jpeg",
-    alt: "Anna presenting The Valthakan Times handoff slide",
+    src: "/images/anna/2.jpeg",
+    alt: "Anna overlooking a desert mountain vista",
     width: 4032,
     height: 2268,
     rotate: "rotate-1",
   },
   {
-    src: "/images/anna/anna-presentation.PNG",
-    alt: "Anna presenting The Valthakan Times case study",
-    width: 1170,
-    height: 877,
+    src: "/images/anna/3.jpeg",
+    alt: "Anna taking a mirror selfie in her Best Buy uniform",
+    width: 4032,
+    height: 3024,
     rotate: "-rotate-1",
+  },
+  {
+    src: "/images/anna/4.jpeg",
+    alt: "Anna taking a selfie on a laptop webcam",
+    width: 4032,
+    height: 3024,
+    rotate: "rotate-2",
+  },
+  {
+    src: "/images/anna/5.jpeg",
+    alt: "Anna smiling beside a lake surrounded by trees",
+    width: 4032,
+    height: 3024,
+    rotate: "-rotate-2",
+  },
+  {
+    src: "/images/anna/6.JPG",
+    alt: "Anna on a suspension bridge overlooking the mountains",
+    width: 5712,
+    height: 4284,
+    rotate: "rotate-1",
+  },
+  {
+    src: "/images/anna/7.jpg",
+    alt: "Anna wearing a handwritten ANNA name tag on a denim jacket",
+    width: 2080,
+    height: 1170,
+    rotate: "-rotate-1",
+  },
+  {
+    src: "/images/anna/profile.png",
+    alt: "Portrait of Anna Park",
+    width: 1171,
+    height: 1041,
+    rotate: "rotate-2",
   },
   {
     src: "/images/anna/volunteer1.JPG",
     alt: "Volunteer badge from Vancouver Startup Week",
     width: 1170,
     height: 2080,
-    rotate: "rotate-2",
-  },
-  {
-    src: "/images/anna/volunteer2.JPG",
-    alt: "Anna wearing a handwritten name tag while volunteering",
-    width: 1170,
-    height: 2080,
     rotate: "-rotate-2",
-  },
-  {
-    src: "/images/anna/volunteer5.jpeg",
-    alt: "Anna holding a venue map while volunteering",
-    width: 4032,
-    height: 3024,
-    rotate: "rotate-1",
-  },
-  {
-    src: "/images/anna/volunteer6.jpeg",
-    alt: "Vancouver Startup Week volunteer team",
-    width: 4032,
-    height: 3024,
-    rotate: "-rotate-1",
-  },
-  {
-    src: "/images/anna/volunteer3.jpg",
-    alt: "Large group photo at a Product BC community event",
-    width: 1170,
-    height: 671,
-    rotate: "rotate-2",
   },
   {
     src: "/images/anna/volunteer4.jpeg",
     alt: "Anna giving a peace sign at a community event",
     width: 4032,
     height: 3024,
-    rotate: "-rotate-2",
+    rotate: "rotate-1",
+  },
+  {
+    src: "/images/anna/volunteer5.jpeg",
+    alt: "Anna holding a venue map while volunteering",
+    width: 4032,
+    height: 3024,
+    rotate: "-rotate-1",
   },
 ];
 
@@ -127,7 +141,7 @@ export default function About() {
                 </h2>
                 <p className="text-lg leading-relaxed text-neutral-700">
                   After moving to Canada, I studied UI/UX Design at Cornerstone International Community College of Canada.
-                  Since then, I've been combining my design education with my software background through projects involving
+                  Since then, I&apos;ve been combining my design education with my software background through projects involving
                   Webflow development and full-stack applications built with Next.js.
                 </p>
                 <p className="mt-5 text-lg leading-relaxed text-neutral-700">
@@ -136,20 +150,6 @@ export default function About() {
                   identifying user problems and designing interfaces to building
                   the final experience.
                   I believe good products come from thoughtful design supported by solid engineering.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="mb-4 text-xs uppercase tracking-[0.2em] text-neutral-400">
-                  Approach
-                </h2>
-                <p className="text-lg leading-relaxed text-neutral-700">
-                  As you can probably tell from this site, I have a soft spot
-                  for clean design — considered typography, a restrained color
-                  palette, and interactions that feel smooth rather than flashy.
-                </p>
-                <p className="mt-6 text-2xl font-light tracking-tight text-neutral-900">
-                  The details are the point.
                 </p>
               </section>
 
