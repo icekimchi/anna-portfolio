@@ -58,6 +58,13 @@ const galleryImages = [
     rotate: "-rotate-1",
   },
   {
+    src: "/images/anna/anna.JPG",
+    alt: "Anna photographing behind a tripod-mounted camera",
+    width: 3024,
+    height: 4032,
+    rotate: "rotate-2",
+  },
+  {
     src: "/images/anna/profile.png",
     alt: "Portrait of Anna Park",
     width: 1171,
@@ -169,8 +176,6 @@ export default function About() {
           </div>
         </div>
       </MotionSection>
-
-      <StickySection/>
 
       {/* Gallery */}
       <section className="px-6 pb-20 lg:px-24 lg:pb-28">
