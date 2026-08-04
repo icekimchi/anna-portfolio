@@ -129,10 +129,10 @@ export default function Home() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="flex max-w-2xl flex-1 flex-col justify-end md:absolute md:left-8 md:top-[20%] md:flex-none md:justify-start"
         >
-          <h1 className="text-3xl font-medium leading-[1.15] text-white [text-shadow:0_2px_28px_rgba(70,100,150,0.35)] md:text-6xl">
+          <h1 className="text-2xl font-medium leading-[1.15] text-white [text-shadow:0_2px_28px_rgba(70,100,150,0.35)] md:text-6xl">
             Hi, I&apos;m Anna.
             <br />
-            I design and build websites.
+            I&apos;m a Goal-driven multidisciplinary designer &amp; developer.
           </h1>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 md:mt-5 md:text-base">
             Product designer &amp; front-end developer based in Vancouver,
