@@ -88,6 +88,19 @@ export const projects: Project[] = [
     team: "Personal",
     tags: ["VISUAL IDENTITY", "BRAND DESIGN", "2026"]
   },
+  {
+    title: "Daily Snap",
+    role: "Full Stack Developer",
+    description: "A Mobile App Promoting Outdoor Activities for Depression Prevention and Treatment",
+    slug: "Daily-snap",
+    image: "/images/dailysnap/header-bretzel.jpg",
+    date: "Arpil ~ Aug 2023",
+    skills: ["Full Stack Devlopment", "JAVA", "Android", "AI"],
+    contentComponent: "DailySnapContent",
+    team: "3 Developers",
+    tags: ["FULL PROCESS", "2023"],
+    liveUrl: "https://www.youtube.com/watch?v=LjcswWptH_U"
+  },
 
 ];
 
