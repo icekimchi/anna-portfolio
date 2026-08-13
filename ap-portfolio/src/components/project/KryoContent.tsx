@@ -74,8 +74,8 @@ export default function KryoContent() {
       </div>
 
       {/* Pages & Features */}
-      <CaseSection title="Contribution">
-        <SubSection title="My Contribution">
+      <CaseSection title="What I built?">
+        <SubSection title="What I built?">
           <Reveal>
             <ul className="space-y-3 font-sans text-gray-700">
               <li className="flex gap-2">
