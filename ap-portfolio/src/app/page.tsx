@@ -12,137 +12,65 @@ const roboto = Roboto({
 
 const MAILTO = "mailto:annapark0828@gmail.com?subject=Hello%20Anna";
 
-/* ---------- Background: looping ambient video ---------- */
-
-function Background() {
-  return (
-    <div aria-hidden className="absolute inset-0 overflow-hidden bg-black">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="h-full w-full object-cover"
-      >
-        <source src="/videos/download.mp4" type="video/mp4" />
-      </video>
-      {/* dark wash so white text/UI stays legible over the footage */}
-      <div className="absolute inset-0 bg-black/25" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
-    </div>
-  );
-}
-
-/* ---------- Top-right navigation cards ---------- */
-
-function NavCard({
-  href,
-  label,
-  img,
-  alt,
-}: {
-  href: string;
-  label: string;
-  img: string;
-  alt: string;
-}) {
-  return (
-    <Link href={href} className="group block">
-      <div className="flex items-stretch justify-between gap-3 rounded-lg bg-white/60 p-2.5 shadow-[0_12px_32px_rgba(90,120,170,0.18)] backdrop-blur-md transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-white/80 group-hover:shadow-[0_18px_44px_rgba(90,120,170,0.28)] md:gap-4 md:p-3">
-        <div className="flex flex-col justify-between">
-          <span className="inline-flex w-fit items-center rounded-full bg-white px-4 py-1.5 text-sm font-medium text-neutral-900 shadow-sm">
-            {label}
-          </span>
-          <span
-            aria-hidden
-            className="pl-1 text-neutral-500 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-neutral-900"
-          >
-            →
-          </span>
-        </div>
-        <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-neutral-100 md:h-28 md:w-36">
-          <Image
-            src={img}
-            alt={alt}
-            fill
-            sizes="(min-width: 768px) 144px, 112px"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      </div>
-    </Link>
-  );
-}
-
 /* ---------- Page ---------- */
 
 export default function Home() {
   return (
     <main
-      className={`${roboto.className} relative flex h-[100svh] flex-col overflow-hidden`}
+      className={`${roboto.className} relative flex h-[100svh] flex-col overflow-hidden bg-white md:flex-row`}
     >
-      <Background />
+      {/* Right: portrait photo */}
+      <div className="relative order-1 h-[38svh] w-full shrink-0 md:order-2 md:h-full md:w-1/2">
+        <Image
+          src="/images/anna/profile.png"
+          alt="Portrait of Anna Park"
+          fill
+          priority
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
 
-      <div className="relative z-10 flex flex-1 flex-col gap-3 px-5 pb-3 pt-4 md:gap-8 md:px-8 md:pb-5 md:pt-8">
-        {/* Top row: email (left) + cards (right) */}
-        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-5">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/"
-              className="rounded-lg bg-white/85 px-4 py-2.5 text-sm font-bold uppercase tracking-[0.25em] text-neutral-900 shadow-[0_10px_28px_rgba(90,120,170,0.25)] backdrop-blur-md transition hover:bg-white"
-            >
-              Anna
-            </Link>
-            <a
-              href={MAILTO}
-              className="w-fit text-sm font-medium text-white underline decoration-white/60 underline-offset-4 transition hover:decoration-white"
-            >
-              annapark0828@gmail.com
-            </a>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="flex w-full flex-col gap-2 md:w-[400px] md:gap-4"
+      {/* Left: intro content */}
+      <div className="relative z-10 order-2 flex flex-1 flex-col justify-between gap-3 overflow-hidden px-5 pb-3 pt-4 md:order-1 md:w-1/2 md:gap-8 md:px-12 md:py-10 lg:px-16">
+        {/* Top row: brand + nav */}
+        <div className="flex items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="rounded-lg bg-neutral-900 px-4 py-2.5 text-sm font-bold uppercase tracking-[0.25em] text-white shadow-sm transition hover:bg-neutral-700"
           >
-            <NavCard
-              href="/about"
-              label="About me"
-              img="/images/anna/profile.png"
-              alt="Portrait of Anna Park"
-            />
-            <NavCard
-              href="/works"
-              label="Works"
-              img="/images/pricesnap/thumbnail.png"
-              alt="PriceSnap project thumbnail"
-            />
-          </motion.div>
+            Anna
+          </Link>
+          <nav className="flex items-center gap-5 text-sm font-medium uppercase tracking-wide text-neutral-600">
+            <Link href="/about" className="transition hover:text-neutral-900">
+              About
+            </Link>
+            <Link href="/works" className="transition hover:text-neutral-900">
+              Works
+            </Link>
+          </nav>
         </div>
 
-        {/* Hero — vertically centered on desktop, lower block on mobile */}
+        {/* Hero text — vertically centered */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="flex max-w-2xl flex-1 flex-col justify-end md:absolute md:left-8 md:top-[20%] md:flex-none md:justify-start"
+          className="flex flex-1 flex-col justify-center"
         >
-          <h1 className="text-2xl font-medium leading-[1.15] text-white [text-shadow:0_2px_28px_rgba(70,100,150,0.35)] md:text-6xl">
-            Hi, I&apos;m Anna.
-            <br />
-            I&apos;m a Goal-driven multidisciplinary designer &amp; developer.
+          <h1 className="font-sans text-3xl font-medium leading-[1.15] text-neutral-900 md:text-6xl">
+            Anna Park
           </h1>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 md:mt-5 md:text-base">
-            Product designer &amp; front-end developer based in Vancouver,
-            crafting bright, thoughtful digital experiences.
+          <p className="mt-3 max-w-md text-base leading-relaxed text-neutral-600 md:mt-5 md:text-lg">
+            Vancouver-based, goal-driven multidisciplinary full-stack
+            developer. I take web projects from the initial UI design all the
+            way to backend API connections.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-3 md:mt-8">
             <a
               href={MAILTO}
-              className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-neutral-900 shadow-[0_10px_28px_rgba(90,120,170,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(90,120,170,0.4)] md:px-6 md:py-3"
+              className="rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-neutral-700 md:px-6 md:py-3"
             >
               Let&apos;s talk →
             </a>
@@ -150,7 +78,7 @@ export default function Home() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-white/70 px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-white/15 md:px-6 md:py-3"
+              className="rounded-lg border border-neutral-300 px-5 py-2.5 text-sm font-medium uppercase tracking-wide text-neutral-900 transition hover:-translate-y-0.5 hover:bg-neutral-100 md:px-6 md:py-3"
             >
               View resume
             </a>
@@ -158,10 +86,13 @@ export default function Home() {
         </motion.div>
 
         {/* Bottom bar */}
-        <div className="flex items-center justify-between gap-4 rounded-lg bg-white/65 px-4 py-2.5 text-xs text-neutral-800 backdrop-blur-md md:mt-auto md:px-5 md:py-3 md:text-sm">
-          <span className="uppercase tracking-wide">
-            Thank you for visiting my portfolio
-          </span>
+        <div className="flex items-center justify-between gap-4 rounded-lg bg-neutral-100 px-4 py-2.5 text-xs text-neutral-700 md:px-5 md:py-3 md:text-sm">
+          <a
+            href={MAILTO}
+            className="truncate font-medium underline decoration-neutral-400 underline-offset-4 transition hover:decoration-neutral-900"
+          >
+            annapark0828@gmail.com
+          </a>
           <a
             href={MAILTO}
             className="whitespace-nowrap font-medium uppercase tracking-wide transition hover:underline"
